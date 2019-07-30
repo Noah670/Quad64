@@ -11,9 +11,9 @@ namespace Quad64.src
     class Theme
     {
         /*** Default colors to fallback on if a specific color is not defined ***/
-        public static Color DEFAULT_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+        public static Color DEFAULT_BACKGROUND = Color.FromArgb(255, 255, 255);
         public static Color DEFAULT_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color DEFAULT_PANEL_BACKGROUND = Color.FromArgb(0xE0, 0xE0, 0xE0);
+        public static Color DEFAULT_PANEL_BACKGROUND = Color.FromArgb(255, 255, 255);
         public static Color DEFAULT_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
         public static Color DEFAULT_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
         public static Color DEFAULT_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
@@ -29,7 +29,7 @@ namespace Quad64.src
         public static Color DEFAULT_UPDOWN_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
 
         /******************** Main Form Specifics ********************/
-        public static Color MAIN_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+        public static Color MAIN_BACKGROUND = Color.FromArgb(255, 255, 255);
 
         public static Color MAIN_TREEVIEW_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
         public static Color MAIN_TREEVIEW_TEXT = Color.FromArgb(0, 0, 0);
@@ -43,7 +43,7 @@ namespace Quad64.src
         public static Color MAIN_PROPERTIES_LINES = Color.FromArgb(0xA9, 0xA9, 0xA9);
         public static Color MAIN_PROPERTIES_TEXT = Color.FromArgb(0, 0, 0);
         
-        public static Color MAIN_CONTROLS_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
+        public static Color MAIN_CONTROLS_BACKGROUND = Color.FromArgb(240, 240, 240);
         public static Color MAIN_CONTROLS_TEXT = Color.FromArgb(0, 0, 0);
         public static Color MAIN_CONTROLS_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
         public static Color MAIN_CONTROLS_DROPDOWNLIST_TEXT = Color.FromArgb(0, 0, 0);
@@ -54,7 +54,7 @@ namespace Quad64.src
 
         public static Color MAIN_MENUBAR_BORDER = Color.FromArgb(0, 0, 0);
         public static Color MAIN_MENUBAR_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color MAIN_MENUBAR_BACKGROUND = Color.FromArgb(0xD3, 0xD3, 0xD3);
+        public static Color MAIN_MENUBAR_BACKGROUND = Color.FromArgb(255, 255, 255);
         public static Color MAIN_MENUBAR_ITEM_SELECTED = Color.FromArgb(0xF9, 0xF9, 0xF9);
         public static Color MAIN_MENUBAR_ITEM_HIGHLIGHT = Color.FromArgb(0xB5, 0xD7, 0xF3);
 

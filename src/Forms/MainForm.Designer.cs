@@ -125,7 +125,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.LightGray;
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -134,12 +134,14 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(174, 24);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(294, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadROMToolStripMenuItem,
             this.saveROMToolStripMenuItem,
@@ -187,6 +189,7 @@
             // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.objectComboPresetToolStripMenuItem,
             this.toolStripSeparator4,
@@ -289,7 +292,7 @@
             // 
             // levelToolStripMenuItem
             // 
-            this.levelToolStripMenuItem.BackColor = System.Drawing.Color.LightGray;
+            this.levelToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.levelToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.levelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.selectLeveToolStripMenuItem,
@@ -394,6 +397,7 @@
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
             this.themesToolStripMenuItem,
@@ -406,35 +410,36 @@
             // 
             // settingsToolStripMenuItem
             // 
+            this.settingsToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // themesToolStripMenuItem
             // 
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            this.themesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.themesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.themesToolStripMenuItem.Text = "Themes";
             this.themesToolStripMenuItem.Click += new System.EventHandler(this.themesToolStripMenuItem_Click);
             // 
             // rOMInfoToolStripMenuItem
             // 
             this.rOMInfoToolStripMenuItem.Name = "rOMInfoToolStripMenuItem";
-            this.rOMInfoToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.rOMInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rOMInfoToolStripMenuItem.Text = "ROM Info";
             this.rOMInfoToolStripMenuItem.Click += new System.EventHandler(this.rOMInfoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             this.toolStripSeparator1.Paint += new System.Windows.Forms.PaintEventHandler(this.ToolStripSeparator_Paint);
             // 
             // scriptsDumpToolStripMenuItem
             // 
             this.scriptsDumpToolStripMenuItem.Name = "scriptsDumpToolStripMenuItem";
-            this.scriptsDumpToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.scriptsDumpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.scriptsDumpToolStripMenuItem.Text = "Script Dumps";
             this.scriptsDumpToolStripMenuItem.Click += new System.EventHandler(this.scriptsDumpToolStripMenuItem_Click);
             // 
@@ -522,7 +527,8 @@
             // 
             this.controlsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlsPanel.BackColor = System.Drawing.Color.Gray;
+            this.controlsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.controlsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.controlsPanel.Controls.Add(this.gridSize);
             this.controlsPanel.Controls.Add(this.gridButton);
             this.controlsPanel.Controls.Add(this.cameraModeLabel);
@@ -552,7 +558,7 @@
             this.gridSize.BackColor = System.Drawing.SystemColors.Window;
             this.gridSize.Enabled = false;
             this.gridSize.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.gridSize.Location = new System.Drawing.Point(603, 94);
+            this.gridSize.Location = new System.Drawing.Point(601, 94);
             this.gridSize.Minimum = new decimal(new int[] {
             2,
             0,
@@ -577,9 +583,9 @@
             this.gridButton.BackColor = System.Drawing.Color.Silver;
             this.gridButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gridButton.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridButton.Location = new System.Drawing.Point(561, 93);
+            this.gridButton.Location = new System.Drawing.Point(559, 93);
             this.gridButton.Name = "gridButton";
-            this.gridButton.Size = new System.Drawing.Size(40, 22);
+            this.gridButton.Size = new System.Drawing.Size(40, 20);
             this.gridButton.TabIndex = 25;
             this.gridButton.TabStop = false;
             this.gridButton.Text = "Grid";
@@ -592,7 +598,7 @@
             this.cameraModeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cameraModeLabel.AutoSize = true;
-            this.cameraModeLabel.Location = new System.Drawing.Point(566, 47);
+            this.cameraModeLabel.Location = new System.Drawing.Point(564, 47);
             this.cameraModeLabel.Name = "cameraModeLabel";
             this.cameraModeLabel.Size = new System.Drawing.Size(76, 13);
             this.cameraModeLabel.TabIndex = 24;
@@ -615,7 +621,7 @@
             "Right",
             "Front",
             "Back"});
-            this.cameraMode.Location = new System.Drawing.Point(560, 63);
+            this.cameraMode.Location = new System.Drawing.Point(558, 63);
             this.cameraMode.Name = "cameraMode";
             this.cameraMode.Size = new System.Drawing.Size(87, 21);
             this.cameraMode.TabIndex = 23;
@@ -659,7 +665,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.camSpeedPercentageLabel.AutoSize = true;
             this.camSpeedPercentageLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.camSpeedPercentageLabel.Location = new System.Drawing.Point(616, 2);
+            this.camSpeedPercentageLabel.Location = new System.Drawing.Point(614, 2);
             this.camSpeedPercentageLabel.Name = "camSpeedPercentageLabel";
             this.camSpeedPercentageLabel.Size = new System.Drawing.Size(35, 14);
             this.camSpeedPercentageLabel.TabIndex = 12;
@@ -672,7 +678,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cameraSpeedLabel.AutoSize = true;
             this.cameraSpeedLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cameraSpeedLabel.Location = new System.Drawing.Point(559, 2);
+            this.cameraSpeedLabel.Location = new System.Drawing.Point(557, 2);
             this.cameraSpeedLabel.Name = "cameraSpeedLabel";
             this.cameraSpeedLabel.Size = new System.Drawing.Size(63, 14);
             this.cameraSpeedLabel.TabIndex = 11;
@@ -684,7 +690,7 @@
             this.trackBar_camSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar_camSpeed.LargeChange = 10;
-            this.trackBar_camSpeed.Location = new System.Drawing.Point(565, 14);
+            this.trackBar_camSpeed.Location = new System.Drawing.Point(563, 14);
             this.trackBar_camSpeed.Maximum = 100;
             this.trackBar_camSpeed.Name = "trackBar_camSpeed";
             this.trackBar_camSpeed.Size = new System.Drawing.Size(82, 45);
@@ -700,7 +706,7 @@
             this.objSpeedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.objSpeedLabel.AutoSize = true;
             this.objSpeedLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objSpeedLabel.Location = new System.Drawing.Point(286, 15);
+            this.objSpeedLabel.Location = new System.Drawing.Point(286, 13);
             this.objSpeedLabel.Name = "objSpeedLabel";
             this.objSpeedLabel.Size = new System.Drawing.Size(35, 14);
             this.objSpeedLabel.TabIndex = 9;
@@ -712,7 +718,7 @@
             this.moveSpeedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.moveSpeedLabel.AutoSize = true;
             this.moveSpeedLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moveSpeedLabel.Location = new System.Drawing.Point(261, 1);
+            this.moveSpeedLabel.Location = new System.Drawing.Point(261, -1);
             this.moveSpeedLabel.Name = "moveSpeedLabel";
             this.moveSpeedLabel.Size = new System.Drawing.Size(84, 14);
             this.moveSpeedLabel.TabIndex = 8;
@@ -740,10 +746,10 @@
             this.moveCamPanel.Controls.Add(this.moveCameraLabel);
             this.moveCamPanel.Controls.Add(this.moveCam_strafe);
             this.moveCamPanel.Controls.Add(this.moveCam_InOut);
-            this.moveCamPanel.Location = new System.Drawing.Point(434, 2);
+            this.moveCamPanel.Location = new System.Drawing.Point(432, 2);
             this.moveCamPanel.Margin = new System.Windows.Forms.Padding(1);
             this.moveCamPanel.Name = "moveCamPanel";
-            this.moveCamPanel.Size = new System.Drawing.Size(125, 120);
+            this.moveCamPanel.Size = new System.Drawing.Size(125, 118);
             this.moveCamPanel.TabIndex = 6;
             // 
             // moveCameraLabel
@@ -794,7 +800,7 @@
             this.rotateObjectPanel.Location = new System.Drawing.Point(127, 2);
             this.rotateObjectPanel.Margin = new System.Windows.Forms.Padding(1);
             this.rotateObjectPanel.Name = "rotateObjectPanel";
-            this.rotateObjectPanel.Size = new System.Drawing.Size(124, 120);
+            this.rotateObjectPanel.Size = new System.Drawing.Size(124, 118);
             this.rotateObjectPanel.TabIndex = 5;
             // 
             // rotateObjectLabel

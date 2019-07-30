@@ -2267,6 +2267,7 @@ namespace Quad64
 
         private const int EM_SETEVENTMASK = (WM_USER + 69);
         private const int WM_SETREDRAW = 0x0b;
+
         private IntPtr OldEventMask;
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
