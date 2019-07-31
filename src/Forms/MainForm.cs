@@ -894,7 +894,7 @@ namespace Quad64
                 );
                 Close();
             }
-            Text += " (OpenGL v" + glString + ")";
+            Console.WriteLine("Using OpenGL " + glString);
             loadROM(Globals.autoLoadROMOnStartup);
         }
 
