@@ -11,142 +11,277 @@ namespace Quad64.src
     class Theme
     {
         /*** Default colors to fallback on if a specific color is not defined ***/
-        public static Color DEFAULT_BACKGROUND = Color.FromArgb(255, 255, 255);
-        public static Color DEFAULT_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color DEFAULT_PANEL_BACKGROUND = Color.FromArgb(255, 255, 255);
-        public static Color DEFAULT_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color DEFAULT_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color DEFAULT_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
-        public static Color DEFAULT_LISTBOX_HIGHLIGHTEDTEXT = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color DEFAULT_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color DEFAULT_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color DEFAULT_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
-        public static Color DEFAULT_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color DEFAULT_DROPDOWNLIST_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color DEFAULT_BUTTON_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color DEFAULT_BUTTON_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color DEFAULT_UPDOWN_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color DEFAULT_UPDOWN_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+        public static Color DEFAULT_BACKGROUND;
+        public static Color DEFAULT_TEXT;
+        public static Color DEFAULT_PANEL_BACKGROUND;
+        public static Color DEFAULT_LISTBOX_BACKGROUND;
+        public static Color DEFAULT_LISTBOX_TEXT;
+        public static Color DEFAULT_LISTBOX_HIGHLIGHT;
+        public static Color DEFAULT_LISTBOX_HIGHLIGHTEDTEXT;
+        public static Color DEFAULT_TEXTBOX_BACKGROUND;
+        public static Color DEFAULT_TEXTBOX_TEXT;
+        public static Color DEFAULT_TEXTBOX_COMMENTS;
+        public static Color DEFAULT_DROPDOWNLIST_BACKGROUND;
+        public static Color DEFAULT_DROPDOWNLIST_TEXT;
+        public static Color DEFAULT_BUTTON_BACKGROUND;
+        public static Color DEFAULT_BUTTON_TEXT;
+        public static Color DEFAULT_UPDOWN_BACKGROUND;
+        public static Color DEFAULT_UPDOWN_TEXT;
 
         /******************** Main Form Specifics ********************/
-        public static Color MAIN_BACKGROUND = Color.FromArgb(255, 255, 255);
+        public static Color MAIN_BACKGROUND;
 
-        public static Color MAIN_TREEVIEW_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color MAIN_TREEVIEW_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color MAIN_TREEVIEW_HIGHTLIGHT = Color.FromArgb(0x70, 0xBB, 0xDB);
-        public static Color MAIN_TREEVIEW_3DOBJECTS = Color.FromArgb(192, 0, 0);
-        public static Color MAIN_TREEVIEW_MACRO = Color.FromArgb(0, 0, 192);
-        public static Color MAIN_TREEVIEW_SPECIAL = Color.FromArgb(0, 192, 0);
-        public static Color MAIN_TREEVIEW_WARPS = Color.FromArgb(0, 0, 0);
+        public static Color MAIN_TREEVIEW_BACKGROUND;
+        public static Color MAIN_TREEVIEW_TEXT;
+        public static Color MAIN_TREEVIEW_HIGHTLIGHT;
+        public static Color MAIN_TREEVIEW_3DOBJECTS;
+        public static Color MAIN_TREEVIEW_MACRO;
+        public static Color MAIN_TREEVIEW_SPECIAL;
+        public static Color MAIN_TREEVIEW_WARPS;
 
-        public static Color MAIN_PROPERTIES_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color MAIN_PROPERTIES_LINES = Color.FromArgb(0xA9, 0xA9, 0xA9);
-        public static Color MAIN_PROPERTIES_TEXT = Color.FromArgb(0, 0, 0);
+        public static Color MAIN_PROPERTIES_BACKGROUND;
+        public static Color MAIN_PROPERTIES_LINES;
+        public static Color MAIN_PROPERTIES_TEXT;
         
-        public static Color MAIN_CONTROLS_BACKGROUND = Color.FromArgb(240, 240, 240);
-        public static Color MAIN_CONTROLS_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color MAIN_CONTROLS_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
-        public static Color MAIN_CONTROLS_DROPDOWNLIST_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color MAIN_CONTROLS_BUTTON_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
-        public static Color MAIN_CONTROLS_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color MAIN_CONTROLS_UPDOWN_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
-        public static Color MAIN_CONTROLS_UPDOWN_TEXT = Color.FromArgb(0, 0, 0);
+        public static Color MAIN_CONTROLS_BACKGROUND;
+        public static Color MAIN_CONTROLS_TEXT;
+        public static Color MAIN_CONTROLS_DROPDOWNLIST_BACKGROUND;
+        public static Color MAIN_CONTROLS_DROPDOWNLIST_TEXT;
+        public static Color MAIN_CONTROLS_BUTTON_BACKGROUND;
+        public static Color MAIN_CONTROLS_BUTTON_TEXT;
+        public static Color MAIN_CONTROLS_UPDOWN_BACKGROUND;
+        public static Color MAIN_CONTROLS_UPDOWN_TEXT;
 
-        public static Color MAIN_MENUBAR_BORDER = Color.FromArgb(0, 0, 0);
-        public static Color MAIN_MENUBAR_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color MAIN_MENUBAR_BACKGROUND = Color.FromArgb(255, 255, 255);
-        public static Color MAIN_MENUBAR_ITEM_SELECTED = Color.FromArgb(0xF9, 0xF9, 0xF9);
-        public static Color MAIN_MENUBAR_ITEM_HIGHLIGHT = Color.FromArgb(0xB5, 0xD7, 0xF3);
+        public static Color MAIN_MENUBAR_BORDER;
+        public static Color MAIN_MENUBAR_TEXT;
+        public static Color MAIN_MENUBAR_BACKGROUND;
+        public static Color MAIN_MENUBAR_ITEM_SELECTED;
+        public static Color MAIN_MENUBAR_ITEM_HIGHLIGHT;
 
         /******************** Object Combo Specifics ********************/
 
-        public static Color COMBOS_BACKGROUND = Color.FromArgb(255, 255, 255);
-        public static Color COMBOS_TEXT = Color.FromArgb(0, 0, 0);
+        public static Color COMBOS_BACKGROUND;
+        public static Color COMBOS_TEXT;
 
-        public static Color COMBOS_3DOBJECTS_TITLE = Color.DarkRed;
-        public static Color COMBOS_3DOBJECTS_MAIN = Color.FromArgb(250, 250, 250);
-        public static Color COMBOS_3DOBJECTS_SECONDARY = Color.FromArgb(250, 240, 240);
-        public static Color COMBOS_3DOBJECTS_HIGHLIGHT = Color.FromArgb(200, 200, 255);
-        public static Color COMBOS_3DOBJECTS_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+        public static Color COMBOS_3DOBJECTS_TITLE;
+        public static Color COMBOS_3DOBJECTS_MAIN;
+        public static Color COMBOS_3DOBJECTS_SECONDARY;
+        public static Color COMBOS_3DOBJECTS_HIGHLIGHT;
+        public static Color COMBOS_3DOBJECTS_HIGHLIGHT_TEXT;
 
-        public static Color COMBOS_MACRO_TITLE = Color.DarkBlue;
-        public static Color COMBOS_MACRO_MAIN = Color.FromArgb(250, 250, 250);
-        public static Color COMBOS_MACRO_SECONDARY = Color.FromArgb(240, 240, 250);
-        public static Color COMBOS_MACRO_HIGHLIGHT = Color.FromArgb(200, 200, 255);
-        public static Color COMBOS_MACRO_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+        public static Color COMBOS_MACRO_TITLE;
+        public static Color COMBOS_MACRO_MAIN;
+        public static Color COMBOS_MACRO_SECONDARY;
+        public static Color COMBOS_MACRO_HIGHLIGHT;
+        public static Color COMBOS_MACRO_HIGHLIGHT_TEXT;
 
-        public static Color COMBOS_SPECIAL_TITLE = Color.DarkGreen;
-        public static Color COMBOS_SPECIAL_MAIN = Color.FromArgb(250, 250, 250);
-        public static Color COMBOS_SPECIAL_SECONDARY = Color.FromArgb(240, 250, 240);
-        public static Color COMBOS_SPECIAL_HIGHLIGHT = Color.FromArgb(200, 200, 255);
-        public static Color COMBOS_SPECIAL_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+        public static Color COMBOS_SPECIAL_TITLE;
+        public static Color COMBOS_SPECIAL_MAIN;
+        public static Color COMBOS_SPECIAL_SECONDARY;
+        public static Color COMBOS_SPECIAL_HIGHLIGHT;
+        public static Color COMBOS_SPECIAL_HIGHLIGHT_TEXT;
 
-        public static Color COMBOS_OTHER_TITLE = Color.DimGray;
-        public static Color COMBOS_OTHER_MAIN = Color.FromArgb(250, 250, 250);
-        public static Color COMBOS_OTHER_SECONDARY = Color.FromArgb(240, 240, 240);
-        public static Color COMBOS_OTHER_HIGHLIGHT = Color.FromArgb(200, 200, 255);
-        public static Color COMBOS_OTHER_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+        public static Color COMBOS_OTHER_TITLE;
+        public static Color COMBOS_OTHER_MAIN;
+        public static Color COMBOS_OTHER_SECONDARY;
+        public static Color COMBOS_OTHER_HIGHLIGHT;
+        public static Color COMBOS_OTHER_HIGHLIGHT_TEXT;
 
         /******************** Texture Editor Specifics ********************/
-        public static Color TEXTURES_BACKGROUND = Color.FromArgb(240, 240, 240);
+        public static Color TEXTURES_BACKGROUND;
 
-        public static Color TEXTURES_LEVEL_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color TEXTURES_LEVEL_BUTTON_BACKGROUND = Color.FromArgb(225, 225, 225);
-        public static Color TEXTURES_LEVEL_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color TEXTURES_LEVEL_BACKGROUND_LEFT = Color.FromArgb(0xB2, 0x22, 0x22);
-        public static Color TEXTURES_LEVEL_BACKGROUND_MIDDLE = Color.FromArgb(0x00, 0x80, 0x00);
-        public static Color TEXTURES_LEVEL_BACKGROUND_RIGHT = Color.FromArgb(0x64, 0x95, 0xED);
+        public static Color TEXTURES_LEVEL_TEXT;
+        public static Color TEXTURES_LEVEL_BUTTON_BACKGROUND;
+        public static Color TEXTURES_LEVEL_BUTTON_TEXT;
+        public static Color TEXTURES_LEVEL_BACKGROUND_LEFT;
+        public static Color TEXTURES_LEVEL_BACKGROUND_MIDDLE;
+        public static Color TEXTURES_LEVEL_BACKGROUND_RIGHT;
 
-        public static Color TEXTURES_OTHER_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color TEXTURES_OTHER_BUTTON_BACKGROUND = Color.FromArgb(225, 225, 225);
-        public static Color TEXTURES_OTHER_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color TEXTURES_OTHER_BACKGROUND_LEFT = Color.FromArgb(0xB2, 0x22, 0x22);
-        public static Color TEXTURES_OTHER_BACKGROUND_MIDDLE = Color.FromArgb(0x00, 0x80, 0x00);
-        public static Color TEXTURES_OTHER_BACKGROUND_RIGHT = Color.FromArgb(0x64, 0x95, 0xED);
+        public static Color TEXTURES_OTHER_TEXT;
+        public static Color TEXTURES_OTHER_BUTTON_BACKGROUND;
+        public static Color TEXTURES_OTHER_BUTTON_TEXT;
+        public static Color TEXTURES_OTHER_BACKGROUND_LEFT;
+        public static Color TEXTURES_OTHER_BACKGROUND_MIDDLE;
+        public static Color TEXTURES_OTHER_BACKGROUND_RIGHT;
         
-        public static Color TEXTURES_SKY_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color TEXTURES_SKY_BUTTON_BACKGROUND = Color.FromArgb(225, 225, 225);
-        public static Color TEXTURES_SKY_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
-        public static Color TEXTURES_SKY_BACKGROUND_LEFT = Color.FromArgb(0x66, 0xCD, 0xAA);
-        public static Color TEXTURES_SKY_BACKGROUND_RIGHT = Color.FromArgb(0x64, 0x95, 0xED);
+        public static Color TEXTURES_SKY_TEXT;
+        public static Color TEXTURES_SKY_BUTTON_BACKGROUND;
+        public static Color TEXTURES_SKY_BUTTON_TEXT;
+        public static Color TEXTURES_SKY_BACKGROUND_LEFT;
+        public static Color TEXTURES_SKY_BACKGROUND_RIGHT;
 
         /******************** Script Dumps Specifics ********************/
-        public static Color SCRIPTDUMPS_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_OPTIONS_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
+        public static Color SCRIPTDUMPS_BACKGROUND;
+        public static Color SCRIPTDUMPS_TEXT;
+        public static Color SCRIPTDUMPS_OPTIONS_BACKGROUND;
 
-        public static Color SCRIPTDUMPS_LEVEL_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_LEVEL_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_LEVEL_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
+        public static Color SCRIPTDUMPS_LEVEL_TEXTBOX_BACKGROUND;
+        public static Color SCRIPTDUMPS_LEVEL_TEXTBOX_TEXT;
+        public static Color SCRIPTDUMPS_LEVEL_TEXTBOX_COMMENTS;
 
-        public static Color SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
+        public static Color SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_BACKGROUND;
+        public static Color SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_TEXT;
+        public static Color SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_COMMENTS;
 
-        public static Color SCRIPTDUMPS_FAST3D_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_FAST3D_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_FAST3D_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
-        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
-        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_HIGHLIGHTEDTEXT = Color.FromArgb(0xF0, 0xF0, 0xF0);
+        public static Color SCRIPTDUMPS_FAST3D_TEXTBOX_BACKGROUND;
+        public static Color SCRIPTDUMPS_FAST3D_TEXTBOX_TEXT;
+        public static Color SCRIPTDUMPS_FAST3D_TEXTBOX_COMMENTS;
+        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_BACKGROUND;
+        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_TEXT;
+        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_HIGHLIGHT;
+        public static Color SCRIPTDUMPS_FAST3D_LISTBOX_HIGHLIGHTEDTEXT;
 
-        public static Color SCRIPTDUMPS_BEHAVIOR_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_BEHAVIOR_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_BEHAVIOR_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
-        
-        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
-        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_HIGHLIGHTEDTEXT = Color.FromArgb(0xF0, 0xF0, 0xF0);
+        public static Color SCRIPTDUMPS_BEHAVIOR_TEXTBOX_BACKGROUND;
+        public static Color SCRIPTDUMPS_BEHAVIOR_TEXTBOX_TEXT;
+        public static Color SCRIPTDUMPS_BEHAVIOR_TEXTBOX_COMMENTS;
 
-        public static Color SCRIPTDUMPS_LEVELTAB_GEOLAYOUT_AREAPANEL_BACKGROUND = Color.FromArgb(0xF5, 0xF5, 0xF5);
-        public static Color SCRIPTDUMPS_LEVELTAB_GEOLAYOUT_AREAPANEL_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-        public static Color SCRIPTDUMPS_LEVELTAB_FAST3D_AREAPANEL_BACKGROUND = Color.FromArgb(0xF5, 0xF5, 0xF5);
-        public static Color SCRIPTDUMPS_LEVELTAB_FAST3D_AREAPANEL_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_BACKGROUND;
+        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_TEXT;
+        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_HIGHLIGHT;
+        public static Color SCRIPTDUMPS_OBJECTSTAB_LISTBOX_HIGHLIGHTEDTEXT;
 
-        public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-        public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+        public static Color SCRIPTDUMPS_LEVELTAB_GEOLAYOUT_AREAPANEL_BACKGROUND;
+        public static Color SCRIPTDUMPS_LEVELTAB_GEOLAYOUT_AREAPANEL_TEXT;
+        public static Color SCRIPTDUMPS_LEVELTAB_FAST3D_AREAPANEL_BACKGROUND;
+        public static Color SCRIPTDUMPS_LEVELTAB_FAST3D_AREAPANEL_TEXT;
+
+        public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_BACKGROUND;
+        public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_TEXT;
+
+        private static void SetColors()
+        {
+            DEFAULT_BACKGROUND = Color.FromArgb(255, 255, 255);
+            DEFAULT_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            DEFAULT_PANEL_BACKGROUND = Color.FromArgb(255, 255, 255);
+            DEFAULT_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            DEFAULT_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            DEFAULT_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
+            DEFAULT_LISTBOX_HIGHLIGHTEDTEXT = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            DEFAULT_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            DEFAULT_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            DEFAULT_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
+            DEFAULT_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            DEFAULT_DROPDOWNLIST_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            DEFAULT_BUTTON_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            DEFAULT_BUTTON_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            DEFAULT_UPDOWN_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            DEFAULT_UPDOWN_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+
+            MAIN_BACKGROUND = Color.FromArgb(255, 255, 255);
+
+            MAIN_TREEVIEW_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            MAIN_TREEVIEW_TEXT = Color.FromArgb(0, 0, 0);
+            MAIN_TREEVIEW_HIGHTLIGHT = Color.FromArgb(0x70, 0xBB, 0xDB);
+            MAIN_TREEVIEW_3DOBJECTS = Color.FromArgb(192, 0, 0);
+            MAIN_TREEVIEW_MACRO = Color.FromArgb(0, 0, 192);
+            MAIN_TREEVIEW_SPECIAL = Color.FromArgb(0, 192, 0);
+            MAIN_TREEVIEW_WARPS = Color.FromArgb(0, 0, 0);
+
+            MAIN_PROPERTIES_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            MAIN_PROPERTIES_LINES = Color.FromArgb(0xA9, 0xA9, 0xA9);
+            MAIN_PROPERTIES_TEXT = Color.FromArgb(0, 0, 0);
+
+            MAIN_CONTROLS_BACKGROUND = Color.FromArgb(240, 240, 240);
+            MAIN_CONTROLS_TEXT = Color.FromArgb(0, 0, 0);
+            MAIN_CONTROLS_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
+            MAIN_CONTROLS_DROPDOWNLIST_TEXT = Color.FromArgb(0, 0, 0);
+            MAIN_CONTROLS_BUTTON_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
+            MAIN_CONTROLS_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
+            MAIN_CONTROLS_UPDOWN_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
+            MAIN_CONTROLS_UPDOWN_TEXT = Color.FromArgb(0, 0, 0);
+
+            MAIN_MENUBAR_BORDER = Color.FromArgb(0, 0, 0);
+            MAIN_MENUBAR_TEXT = Color.FromArgb(0, 0, 0);
+            MAIN_MENUBAR_BACKGROUND = Color.FromArgb(255, 255, 255);
+            MAIN_MENUBAR_ITEM_SELECTED = Color.FromArgb(0xF9, 0xF9, 0xF9);
+            MAIN_MENUBAR_ITEM_HIGHLIGHT = Color.FromArgb(0xB5, 0xD7, 0xF3);
+
+            COMBOS_BACKGROUND = Color.FromArgb(255, 255, 255);
+            COMBOS_TEXT = Color.FromArgb(0, 0, 0);
+
+            COMBOS_3DOBJECTS_TITLE = Color.DarkRed;
+            COMBOS_3DOBJECTS_MAIN = Color.FromArgb(250, 250, 250);
+            COMBOS_3DOBJECTS_SECONDARY = Color.FromArgb(250, 240, 240);
+            COMBOS_3DOBJECTS_HIGHLIGHT = Color.FromArgb(200, 200, 255);
+            COMBOS_3DOBJECTS_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+
+            COMBOS_MACRO_TITLE = Color.DarkBlue;
+            COMBOS_MACRO_MAIN = Color.FromArgb(250, 250, 250);
+            COMBOS_MACRO_SECONDARY = Color.FromArgb(240, 240, 250);
+            COMBOS_MACRO_HIGHLIGHT = Color.FromArgb(200, 200, 255);
+            COMBOS_MACRO_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+
+            COMBOS_SPECIAL_TITLE = Color.DarkGreen;
+            COMBOS_SPECIAL_MAIN = Color.FromArgb(250, 250, 250);
+            COMBOS_SPECIAL_SECONDARY = Color.FromArgb(240, 250, 240);
+            COMBOS_SPECIAL_HIGHLIGHT = Color.FromArgb(200, 200, 255);
+            COMBOS_SPECIAL_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+
+            COMBOS_OTHER_TITLE = Color.DimGray;
+            COMBOS_OTHER_MAIN = Color.FromArgb(250, 250, 250);
+            COMBOS_OTHER_SECONDARY = Color.FromArgb(240, 240, 240);
+            COMBOS_OTHER_HIGHLIGHT = Color.FromArgb(200, 200, 255);
+            COMBOS_OTHER_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
+
+            TEXTURES_BACKGROUND = Color.FromArgb(240, 240, 240);
+
+            TEXTURES_LEVEL_TEXT = Color.FromArgb(0, 0, 0);
+            TEXTURES_LEVEL_BUTTON_BACKGROUND = Color.FromArgb(225, 225, 225);
+            TEXTURES_LEVEL_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
+            TEXTURES_LEVEL_BACKGROUND_LEFT = Color.FromArgb(0xB2, 0x22, 0x22);
+            TEXTURES_LEVEL_BACKGROUND_MIDDLE = Color.FromArgb(0x00, 0x80, 0x00);
+            TEXTURES_LEVEL_BACKGROUND_RIGHT = Color.FromArgb(0x64, 0x95, 0xED);
+
+            TEXTURES_OTHER_TEXT = Color.FromArgb(0, 0, 0);
+            TEXTURES_OTHER_BUTTON_BACKGROUND = Color.FromArgb(225, 225, 225);
+            TEXTURES_OTHER_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
+            TEXTURES_OTHER_BACKGROUND_LEFT = Color.FromArgb(0xB2, 0x22, 0x22);
+            TEXTURES_OTHER_BACKGROUND_MIDDLE = Color.FromArgb(0x00, 0x80, 0x00);
+            TEXTURES_OTHER_BACKGROUND_RIGHT = Color.FromArgb(0x64, 0x95, 0xED);
+
+            TEXTURES_SKY_TEXT = Color.FromArgb(0, 0, 0);
+            TEXTURES_SKY_BUTTON_BACKGROUND = Color.FromArgb(225, 225, 225);
+            TEXTURES_SKY_BUTTON_TEXT = Color.FromArgb(0, 0, 0);
+            TEXTURES_SKY_BACKGROUND_LEFT = Color.FromArgb(0x66, 0xCD, 0xAA);
+            TEXTURES_SKY_BACKGROUND_RIGHT = Color.FromArgb(0x64, 0x95, 0xED);
+
+            SCRIPTDUMPS_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_OPTIONS_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
+
+            SCRIPTDUMPS_LEVEL_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_LEVEL_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_LEVEL_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
+
+            SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_GEOLAYOUT_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
+
+            SCRIPTDUMPS_FAST3D_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_FAST3D_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_FAST3D_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
+            SCRIPTDUMPS_FAST3D_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_FAST3D_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_FAST3D_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
+            SCRIPTDUMPS_FAST3D_LISTBOX_HIGHLIGHTEDTEXT = Color.FromArgb(0xF0, 0xF0, 0xF0);
+
+            SCRIPTDUMPS_BEHAVIOR_TEXTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_BEHAVIOR_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_BEHAVIOR_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
+
+            SCRIPTDUMPS_OBJECTSTAB_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_OBJECTSTAB_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_OBJECTSTAB_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
+            SCRIPTDUMPS_OBJECTSTAB_LISTBOX_HIGHLIGHTEDTEXT = Color.FromArgb(0xF0, 0xF0, 0xF0);
+
+            SCRIPTDUMPS_LEVELTAB_GEOLAYOUT_AREAPANEL_BACKGROUND = Color.FromArgb(0xF5, 0xF5, 0xF5);
+            SCRIPTDUMPS_LEVELTAB_GEOLAYOUT_AREAPANEL_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+            SCRIPTDUMPS_LEVELTAB_FAST3D_AREAPANEL_BACKGROUND = Color.FromArgb(0xF5, 0xF5, 0xF5);
+            SCRIPTDUMPS_LEVELTAB_FAST3D_AREAPANEL_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+
+            SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
+            SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+        }
 
         public static void LoadColor(ref Color color, Color default_color, JToken token)
         {
@@ -175,28 +310,12 @@ namespace Quad64.src
 
         public static void LoadColorsFromJSONFile(string filepath)
         {
+            // Reset colors
+            SetColors();
+
             if (File.Exists(filepath))
             {
-                lastThemePath = filepath;
-
-                // Reset defaults
-                DEFAULT_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-                DEFAULT_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-                DEFAULT_PANEL_BACKGROUND = Color.FromArgb(0xDC, 0xDC, 0xDC);
-                DEFAULT_LISTBOX_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-                DEFAULT_LISTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-                DEFAULT_LISTBOX_HIGHLIGHT = Color.FromArgb(0x00, 0x78, 0xD7);
-                DEFAULT_LISTBOX_HIGHLIGHTEDTEXT = Color.FromArgb(0xFF, 0xFF, 0xFF);
-                DEFAULT_TEXTBOX_BACKGROUND = Color.FromArgb(0xFF, 0xFF, 0xFF);
-                DEFAULT_TEXTBOX_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-                DEFAULT_TEXTBOX_COMMENTS = Color.FromArgb(0x00, 0x80, 0x00);
-                DEFAULT_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xD0, 0xD0, 0xD0);
-                DEFAULT_DROPDOWNLIST_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-                DEFAULT_BUTTON_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-                DEFAULT_BUTTON_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-                DEFAULT_UPDOWN_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-                DEFAULT_UPDOWN_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
-                
+                lastThemePath = filepath;       
 
                 string json = File.ReadAllText(filepath);
                 JObject o = JObject.Parse(json);
@@ -347,7 +466,6 @@ namespace Quad64.src
                     LoadColor(ref COMBOS_OTHER_HIGHLIGHT, Color.FromArgb(200, 200, 255), o["ObjectCombos"]["Other-Item-Highlight"]);
                     LoadColor(ref COMBOS_OTHER_HIGHLIGHT_TEXT, DEFAULT_TEXT, o["ObjectCombos"]["Other-Item-Highlight-Text"]);
                 }
-
             }
             else
             {
