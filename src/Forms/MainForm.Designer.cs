@@ -75,7 +75,7 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.controlsPanel = new System.Windows.Forms.Panel();
             this.gridSize = new System.Windows.Forms.NumericUpDown();
-            this.gridButton = new System.Windows.Forms.CheckBox();
+            this.grid = new System.Windows.Forms.CheckBox();
             this.cameraModeLabel = new System.Windows.Forms.Label();
             this.cameraMode = new System.Windows.Forms.ComboBox();
             this.keepOnGround = new System.Windows.Forms.CheckBox();
@@ -307,7 +307,7 @@
             // selectLeveToolStripMenuItem
             // 
             this.selectLeveToolStripMenuItem.Name = "selectLeveToolStripMenuItem";
-            this.selectLeveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectLeveToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.selectLeveToolStripMenuItem.Text = "Select Level";
             this.selectLeveToolStripMenuItem.Click += new System.EventHandler(this.selectLeveToolStripMenuItem_Click);
             // 
@@ -323,7 +323,7 @@
             this.Area6Button,
             this.Area7Button});
             this.selectAreaToolStripMenuItem.Name = "selectAreaToolStripMenuItem";
-            this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.selectAreaToolStripMenuItem.Text = "Select Area";
             // 
             // Area0Button
@@ -385,13 +385,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(132, 6);
             this.toolStripSeparator2.Paint += new System.Windows.Forms.PaintEventHandler(this.ToolStripSeparator_Paint);
             // 
             // texturesToolStripMenuItem1
             // 
             this.texturesToolStripMenuItem1.Name = "texturesToolStripMenuItem1";
-            this.texturesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.texturesToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.texturesToolStripMenuItem1.Text = "Textures";
             this.texturesToolStripMenuItem1.Click += new System.EventHandler(this.texturesToolStripMenuItem_Click);
             // 
@@ -530,7 +530,7 @@
             this.controlsPanel.BackColor = System.Drawing.SystemColors.Control;
             this.controlsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.controlsPanel.Controls.Add(this.gridSize);
-            this.controlsPanel.Controls.Add(this.gridButton);
+            this.controlsPanel.Controls.Add(this.grid);
             this.controlsPanel.Controls.Add(this.cameraModeLabel);
             this.controlsPanel.Controls.Add(this.cameraMode);
             this.controlsPanel.Controls.Add(this.keepOnGround);
@@ -575,23 +575,22 @@
             0});
             this.gridSize.ValueChanged += new System.EventHandler(this.gridSize_ValueChanged);
             // 
-            // gridButton
+            // grid
             // 
-            this.gridButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.gridButton.BackColor = System.Drawing.Color.Silver;
-            this.gridButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gridButton.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridButton.Location = new System.Drawing.Point(559, 93);
-            this.gridButton.Name = "gridButton";
-            this.gridButton.Size = new System.Drawing.Size(40, 20);
-            this.gridButton.TabIndex = 25;
-            this.gridButton.TabStop = false;
-            this.gridButton.Text = "Grid";
-            this.gridButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.gridButton.UseVisualStyleBackColor = false;
-            this.gridButton.CheckedChanged += new System.EventHandler(this.gridButton_CheckedChanged);
+            this.grid.BackColor = System.Drawing.Color.Transparent;
+            this.grid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grid.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid.Location = new System.Drawing.Point(558, 94);
+            this.grid.Name = "grid";
+            this.grid.Size = new System.Drawing.Size(46, 20);
+            this.grid.TabIndex = 25;
+            this.grid.TabStop = false;
+            this.grid.Text = "Grid";
+            this.grid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.grid.UseVisualStyleBackColor = false;
+            this.grid.CheckedChanged += new System.EventHandler(this.grid_CheckedChanged);
             // 
             // cameraModeLabel
             // 
@@ -631,14 +630,13 @@
             // 
             // keepOnGround
             // 
-            this.keepOnGround.Appearance = System.Windows.Forms.Appearance.Button;
-            this.keepOnGround.BackColor = System.Drawing.Color.Silver;
+            this.keepOnGround.BackColor = System.Drawing.Color.Transparent;
             this.keepOnGround.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.keepOnGround.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.keepOnGround.Location = new System.Drawing.Point(254, 82);
+            this.keepOnGround.Location = new System.Drawing.Point(260, 94);
             this.keepOnGround.Margin = new System.Windows.Forms.Padding(0);
             this.keepOnGround.Name = "keepOnGround";
-            this.keepOnGround.Size = new System.Drawing.Size(95, 24);
+            this.keepOnGround.Size = new System.Drawing.Size(102, 26);
             this.keepOnGround.TabIndex = 0;
             this.keepOnGround.TabStop = false;
             this.keepOnGround.Text = "Keep on ground";
@@ -650,7 +648,7 @@
             this.dropToGround.BackColor = System.Drawing.Color.Silver;
             this.dropToGround.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dropToGround.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropToGround.Location = new System.Drawing.Point(254, 57);
+            this.dropToGround.Location = new System.Drawing.Point(260, 67);
             this.dropToGround.Margin = new System.Windows.Forms.Padding(0);
             this.dropToGround.Name = "dropToGround";
             this.dropToGround.Size = new System.Drawing.Size(95, 24);
@@ -1031,7 +1029,7 @@
         private System.Windows.Forms.ToolStripMenuItem warpToolStripMenuItem;
         private System.Windows.Forms.ComboBox cameraMode;
         private System.Windows.Forms.Label cameraModeLabel;
-        private System.Windows.Forms.CheckBox gridButton;
+        private System.Windows.Forms.CheckBox grid;
         private System.Windows.Forms.NumericUpDown gridSize;
         private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
         private System.Windows.Forms.Label triangleCount;

@@ -154,10 +154,10 @@ namespace Quad64
 
             dropToGround.BackColor = Theme.MAIN_CONTROLS_BUTTON_BACKGROUND;
             dropToGround.ForeColor = Theme.MAIN_CONTROLS_BUTTON_TEXT;
-            keepOnGround.BackColor = Theme.MAIN_CONTROLS_BUTTON_BACKGROUND;
+            keepOnGround.BackColor = Color.Transparent;
             keepOnGround.ForeColor = Theme.MAIN_CONTROLS_BUTTON_TEXT;
-            gridButton.BackColor = Theme.MAIN_CONTROLS_BUTTON_BACKGROUND;
-            gridButton.ForeColor = Theme.MAIN_CONTROLS_BUTTON_TEXT;
+            grid.BackColor = Color.Transparent;
+            grid.ForeColor = Theme.MAIN_CONTROLS_BUTTON_TEXT;
 
             gridSize.BackColor = Theme.MAIN_CONTROLS_UPDOWN_BACKGROUND;
             gridSize.ForeColor = Theme.MAIN_CONTROLS_UPDOWN_TEXT;
@@ -1476,9 +1476,9 @@ namespace Quad64
             glControl1.Invalidate();
         }
         
-        private void gridButton_CheckedChanged(object sender, EventArgs e)
+        private void grid_CheckedChanged(object sender, EventArgs e)
         {
-            if (gridButton.Checked)
+            if (grid.Checked)
             {
                 gridSize.Enabled = true;
                 gridEnabled = true;
