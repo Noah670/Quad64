@@ -321,7 +321,12 @@ namespace Quad64.src
             // Reset colors
             SetColors();
 
-            if (File.Exists(filepath))
+            if (filepath == "")
+            {
+                // Default theme
+                lastThemePath = "";
+            }
+            else if (File.Exists(filepath))
             {
                 lastThemePath = filepath;       
 

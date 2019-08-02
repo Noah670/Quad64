@@ -36,10 +36,18 @@ namespace Quad64.src.Forms
 
         private void ThemeSelector_Load(object sender, EventArgs e)
         {
+            ListViewItem item = new ListViewItem();
+            item.Tag = "";
+            item.SubItems.Add(new ListViewItem.ListViewSubItem());
+            item.SubItems[0].Text = "Quad64 Light";
+            item.SubItems.Add(new ListViewItem.ListViewSubItem());
+            item.SubItems[1].Text = "YoshiHack56";
+            listView1.Items.Add(item);
+
             string[] files = Directory.GetFiles("./data/themes/");
             for (int i = 0; i < files.Length; i++)
             {
-                if(files[i].EndsWith(".json"))
+                if (files[i].EndsWith(".json"))
                 {
                     string json = File.ReadAllText(files[i]);
                     JObject o = JObject.Parse(json);
@@ -51,7 +59,7 @@ namespace Quad64.src.Forms
                         if (o["Info"]["Author"] != null)
                             author = o["Info"]["Author"].ToString();
 
-                        ListViewItem item = new ListViewItem();
+                        item = new ListViewItem();
                         item.Tag = files[i];
                         item.SubItems.Add(new ListViewItem.ListViewSubItem());
                         item.SubItems[0].Text = name;
