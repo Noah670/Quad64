@@ -315,7 +315,7 @@ namespace Quad64.src
             if (MainForm.ActiveForm != null)
             {
                 mainForm = MainForm.ActiveForm;
-                mainForm.Visible = false;           
+                mainForm.Hide();           
             }
 
             // Reset colors
@@ -487,7 +487,7 @@ namespace Quad64.src
 
             if (mainForm != null)
             {
-                mainForm.Visible = true;
+                mainForm.Show();
             }
         }
     }
