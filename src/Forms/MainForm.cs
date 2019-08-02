@@ -134,6 +134,7 @@ namespace Quad64
             treeView1.Nodes[1].ForeColor = Theme.MAIN_TREEVIEW_MACRO; // "Macro 3D Objects" text
             treeView1.Nodes[2].ForeColor = Theme.MAIN_TREEVIEW_SPECIAL; // "Special 3D Objects" text
             treeView1.Nodes[3].ForeColor = Theme.MAIN_TREEVIEW_WARPS; // "Warps" text
+            splitContainer3.Refresh();  // Refresh the left split container so there are no remains of the old theme 
 
             propertyGrid1.ViewForeColor = Theme.MAIN_PROPERTIES_TEXT;
             propertyGrid1.ViewBackColor = Theme.MAIN_PROPERTIES_BACKGROUND;

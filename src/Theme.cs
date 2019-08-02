@@ -5,6 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using System.Windows.Forms;
 
 namespace Quad64.src
 {
@@ -148,7 +149,7 @@ namespace Quad64.src
         public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_BACKGROUND;
         public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_TEXT;
 
-        private static void SetColors()
+        public static void SetColors()
         {
             DEFAULT_BACKGROUND = Color.FromArgb(255, 255, 255);
             DEFAULT_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
@@ -310,6 +311,13 @@ namespace Quad64.src
 
         public static void LoadColorsFromJSONFile(string filepath)
         {
+            Form mainForm = null;
+            if (MainForm.ActiveForm != null)
+            {
+                mainForm = MainForm.ActiveForm;
+                mainForm.Visible = false;           
+            }
+
             // Reset colors
             SetColors();
 
@@ -396,7 +404,7 @@ namespace Quad64.src
                     LoadColor(ref MAIN_PROPERTIES_TEXT, DEFAULT_TEXT, o["Main"]["Properties-Text"]);
                     LoadColor(ref MAIN_PROPERTIES_LINES, Color.FromArgb(0xA9, 0xA9, 0xA9), o["Main"]["Properties-Lines"]);
                     
-                    LoadColor(ref MAIN_CONTROLS_BACKGROUND, Color.FromArgb(0x90, 0x90, 0x90), o["Main"]["Controls-Background"]);
+                    LoadColor(ref MAIN_CONTROLS_BACKGROUND, MAIN_CONTROLS_BACKGROUND, o["Main"]["Controls-Background"]);
                     LoadColor(ref MAIN_CONTROLS_TEXT, DEFAULT_TEXT, o["Main"]["Controls-Text"]);
                     LoadColor(ref MAIN_CONTROLS_BUTTON_BACKGROUND, DEFAULT_BUTTON_BACKGROUND, o["Main"]["Controls-Button-Background"]);
                     LoadColor(ref MAIN_CONTROLS_BUTTON_TEXT, DEFAULT_BUTTON_TEXT, o["Main"]["Controls-Button-Text"]);
@@ -470,6 +478,11 @@ namespace Quad64.src
             else
             {
                 Console.WriteLine("THEME ERROR: File: \"" + filepath + "\" could not be found!");
+            }
+
+            if (mainForm != null)
+            {
+                mainForm.Visible = true;
             }
         }
     }
