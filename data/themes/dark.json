@@ -1,8 +1,8 @@
 {
 	"Info" : {
-		"Name" : "Quad64 Dark Theme",
+		"Name" : "Quad64 Dark",
 		"Author" : "Davideesk",
-		"Note" : "This dark theme does not show every possible option you can change, so please look at 'Making Themes.txt' for more information!"
+		"Note" : "This theme does not show every possible option you can change, so please look at 'Making Themes.txt' for more information!"
 	},
 	
 	"Defaults" : {
@@ -36,10 +36,10 @@
 		"Properties-Lines" : { "R":120, "G":120, "B":120 },
 		
 		"TreeView-Highlight" : { "R":110, "G":110, "B":160 },
-		"TreeView-3DObjectsLabel" : { "R":220, "G":140, "B":140 },
-		"TreeView-MacroObjectsLabel" : { "R":140, "G":140, "B":220 },
-		"TreeView-SpecialObjectsLabel" : { "R":140, "G":220, "B":140 },
-		"TreeView-WarpsLabel" : { "R":220, "G":220, "B":220 }
+		"TreeView-3DObjectsLabel" : { "R":255, "G":0, "B":0 },
+		"TreeView-MacroObjectsLabel" : { "R":0, "G":200, "B":255 },
+		"TreeView-SpecialObjectsLabel" : { "R":0, "G":255, "B":0 },
+		"TreeView-WarpsLabel" : { "R":255, "G":255, "B":255 }
 	},
 	
 	"TextureEditor" : {
