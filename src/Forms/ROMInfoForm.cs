@@ -19,22 +19,28 @@ namespace Quad64
             addNewRow("Size (MB)", (rom.Bytes.Length / 1024 / 1024).ToString());
 
             BackColor = Theme.DEFAULT_BACKGROUND;
-            label1.ForeColor = Theme.DEFAULT_TEXT;
         }
 
         private void addNewRow(string rowName, string rowData)
         {
-            table.Controls.Add(newLabel(rowName), 0, table.Controls.Count/2);
+            table.Controls.Add(newLabel(rowName, true), 0, table.Controls.Count/2);
             table.Controls.Add(newLabel(rowData), 1, table.Controls.Count / 2);
         }
 
-        private TextBox newLabel(string text)
+        private TextBox newLabel(string text, bool bold = false)
         {
             TextBox label = new TextBox();
             label.Text = text;
-            label.Font = new System.Drawing.Font("Times new roman", 10);
-            label.TextAlign = HorizontalAlignment.Center;
-            label.AutoSize = false;
+
+            if (bold == true)
+            {
+                label.Font = new System.Drawing.Font("Segoe UI", 9, System.Drawing.FontStyle.Bold);
+            }
+            else
+            {
+                label.Font = new System.Drawing.Font("Segoe UI", 9);
+            }
+
             label.Dock = DockStyle.Fill;
             label.ReadOnly = true;
             label.BorderStyle = 0;
