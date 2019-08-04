@@ -54,6 +54,7 @@
             this.themes.UseCompatibleStateImageBehavior = false;
             this.themes.View = System.Windows.Forms.View.Details;
             this.themes.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.themes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Themes_MouseDoubleClick);
             // 
             // name
             // 

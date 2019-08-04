@@ -92,5 +92,13 @@ namespace Quad64.src.Forms
             else
                 load_button.Enabled = false;
         }
+
+        private void Themes_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (themes.SelectedIndices.Count > 0)
+            {
+                load_button_Click(sender, new EventArgs());
+            }
+        }
     }
 }
