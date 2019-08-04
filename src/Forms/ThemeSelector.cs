@@ -39,7 +39,16 @@ namespace Quad64.src.Forms
             ListViewItem item = new ListViewItem();
             item.Tag = "";
             item.SubItems.Add(new ListViewItem.ListViewSubItem());
-            item.SubItems[0].Text = "Quad64 Light";
+
+            if (Theme.lastThemePath == "")
+            {
+                item.SubItems[0].Text = "Quad64 Light (active)";
+            }
+            else
+            {
+                item.SubItems[0].Text = "Quad64 Light";
+            }
+
             item.SubItems.Add(new ListViewItem.ListViewSubItem());
             item.SubItems[1].Text = "YoshiHack56";
             themes.Items.Add(item);
@@ -62,6 +71,12 @@ namespace Quad64.src.Forms
                         item = new ListViewItem();
                         item.Tag = files[i];
                         item.SubItems.Add(new ListViewItem.ListViewSubItem());
+
+                        if (Theme.lastThemePath == files[i])
+                        {
+                            name += " (active)";
+                        }
+
                         item.SubItems[0].Text = name;
                         item.SubItems.Add(new ListViewItem.ListViewSubItem());
                         item.SubItems[1].Text = author;
