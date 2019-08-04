@@ -29,41 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemeSelector));
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.test = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.themes = new System.Windows.Forms.ListView();
+            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.author = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cancel_button = new System.Windows.Forms.Button();
             this.load_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // themes
             // 
-            this.listView1.AutoArrange = false;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.test,
-            this.Author});
-            this.listView1.FullRowSelect = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(350, 170);
-            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView1.TabIndex = 0;
-            this.listView1.TabStop = false;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.themes.AutoArrange = false;
+            this.themes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.name,
+            this.author});
+            this.themes.FullRowSelect = true;
+            this.themes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.themes.Location = new System.Drawing.Point(12, 12);
+            this.themes.Name = "themes";
+            this.themes.ShowGroups = false;
+            this.themes.Size = new System.Drawing.Size(350, 170);
+            this.themes.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.themes.TabIndex = 0;
+            this.themes.TabStop = false;
+            this.themes.UseCompatibleStateImageBehavior = false;
+            this.themes.View = System.Windows.Forms.View.Details;
+            this.themes.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // test
+            // name
             // 
-            this.test.Text = "Name";
-            this.test.Width = 250;
+            this.name.Text = "Name";
+            this.name.Width = 250;
             // 
-            // Author
+            // author
             // 
-            this.Author.Text = "Author";
-            this.Author.Width = 96;
+            this.author.Text = "Author";
+            this.author.Width = 96;
             // 
             // cancel_button
             // 
@@ -94,14 +94,14 @@
             this.ClientSize = new System.Drawing.Size(372, 223);
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.load_button);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.themes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ThemeSelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Select a Theme";
+            this.Text = "Select Theme";
             this.Load += new System.EventHandler(this.ThemeSelector_Load);
             this.ResumeLayout(false);
 
@@ -109,9 +109,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader test;
-        private System.Windows.Forms.ColumnHeader Author;
+        private System.Windows.Forms.ListView themes;
+        private System.Windows.Forms.ColumnHeader name;
+        private System.Windows.Forms.ColumnHeader author;
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.Button load_button;
     }

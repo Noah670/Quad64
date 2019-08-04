@@ -26,8 +26,8 @@ namespace Quad64.src.Forms
         private void updateTheme()
         {
             BackColor = Theme.DEFAULT_PANEL_BACKGROUND;
-            listView1.BackColor = Theme.DEFAULT_BACKGROUND;
-            listView1.ForeColor = Theme.DEFAULT_TEXT;
+            themes.BackColor = Theme.DEFAULT_BACKGROUND;
+            themes.ForeColor = Theme.DEFAULT_TEXT;
             load_button.BackColor = Theme.DEFAULT_BUTTON_BACKGROUND;
             load_button.ForeColor = Theme.DEFAULT_BUTTON_TEXT;
             cancel_button.BackColor = Theme.DEFAULT_BUTTON_BACKGROUND;
@@ -42,7 +42,7 @@ namespace Quad64.src.Forms
             item.SubItems[0].Text = "Quad64 Light";
             item.SubItems.Add(new ListViewItem.ListViewSubItem());
             item.SubItems[1].Text = "YoshiHack56";
-            listView1.Items.Add(item);
+            themes.Items.Add(item);
 
             string[] files = Directory.GetFiles("./data/themes/");
             for (int i = 0; i < files.Length; i++)
@@ -66,7 +66,7 @@ namespace Quad64.src.Forms
                         item.SubItems.Add(new ListViewItem.ListViewSubItem());
                         item.SubItems[1].Text = author;
 
-                        listView1.Items.Add(item);
+                        themes.Items.Add(item);
                     }
                 }
             }
@@ -81,13 +81,13 @@ namespace Quad64.src.Forms
         private void load_button_Click(object sender, EventArgs e)
         {
             doUpdate = true;
-            themePath = (string)listView1.SelectedItems[0].Tag;
+            themePath = (string)themes.SelectedItems[0].Tag;
             Hide();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView1.SelectedIndices.Count > 0)
+            if (themes.SelectedIndices.Count > 0)
                 load_button.Enabled = true;
             else
                 load_button.Enabled = false;
