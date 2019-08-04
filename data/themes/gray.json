@@ -14,5 +14,13 @@
     "Background": { "R": "240", "G": "240", "B": "240" },
     "MenuBar-Background": { "R": "220", "G": "220", "B": "220" },
     "Controls-Background" : { "R": "144", "G": "144", "B": "144" }
-	}
+	},
+
+  "ScriptDumps": {
+    "Background": { "R": "240", "G": "240", "B": "240" },
+    "LevelScripts-Background": { "R": "240", "G": "240", "B": "240" },
+    "GeoLayoutScripts-Background": { "R": "240", "G": "240", "B": "240" },
+    "Fast3DScripts-Background": { "R": "240", "G": "240", "B": "240" },
+    "BehaviorScripts-Background": { "R": "240", "G": "240", "B": "240" }
+  }
 }
