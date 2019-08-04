@@ -22,5 +22,9 @@
     "GeoLayoutScripts-Background": { "R": "240", "G": "240", "B": "240" },
     "Fast3DScripts-Background": { "R": "240", "G": "240", "B": "240" },
     "BehaviorScripts-Background": { "R": "240", "G": "240", "B": "240" }
+  },
+
+  "TextureEditor": {
+    "Background": { "R": "240", "G": "240", "B": "240" }
   }
 }

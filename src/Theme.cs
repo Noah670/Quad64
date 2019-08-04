@@ -224,7 +224,7 @@ namespace Quad64.src
             COMBOS_OTHER_HIGHLIGHT = Color.FromArgb(200, 200, 255);
             COMBOS_OTHER_HIGHLIGHT_TEXT = Color.FromArgb(0, 0, 0);
 
-            TEXTURES_BACKGROUND = Color.FromArgb(240, 240, 240);
+            TEXTURES_BACKGROUND = Color.FromArgb(255, 255, 255);
 
             TEXTURES_LEVEL_TEXT = Color.FromArgb(0, 0, 0);
             TEXTURES_LEVEL_BUTTON_BACKGROUND = Color.FromArgb(225, 225, 225);
