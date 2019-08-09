@@ -52,14 +52,14 @@
             this.levelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area0Button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area1Button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area2Button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area3Button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area4Button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area5Button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area6Button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Area7Button = new System.Windows.Forms.ToolStripMenuItem();
+            this.area0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.area1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.area2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.area3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.area4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.area5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.area6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.area7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.texturesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -314,73 +314,73 @@
             // selectAreaToolStripMenuItem
             // 
             this.selectAreaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Area0Button,
-            this.Area1Button,
-            this.Area2Button,
-            this.Area3Button,
-            this.Area4Button,
-            this.Area5Button,
-            this.Area6Button,
-            this.Area7Button});
+            this.area0ToolStripMenuItem,
+            this.area1ToolStripMenuItem,
+            this.area2ToolStripMenuItem,
+            this.area3ToolStripMenuItem,
+            this.area4ToolStripMenuItem,
+            this.area5ToolStripMenuItem,
+            this.area6ToolStripMenuItem,
+            this.area7ToolStripMenuItem});
             this.selectAreaToolStripMenuItem.Name = "selectAreaToolStripMenuItem";
             this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.selectAreaToolStripMenuItem.Text = "Select Area";
             // 
-            // Area0Button
+            // area0ToolStripMenuItem
             // 
-            this.Area0Button.Name = "Area0Button";
-            this.Area0Button.Size = new System.Drawing.Size(107, 22);
-            this.Area0Button.Text = "Area 0";
-            this.Area0Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area0ToolStripMenuItem.Name = "area0ToolStripMenuItem";
+            this.area0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area0ToolStripMenuItem.Text = "Area 0";
+            this.area0ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
-            // Area1Button
+            // area1ToolStripMenuItem
             // 
-            this.Area1Button.Name = "Area1Button";
-            this.Area1Button.Size = new System.Drawing.Size(107, 22);
-            this.Area1Button.Text = "Area 1";
-            this.Area1Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area1ToolStripMenuItem.Name = "area1ToolStripMenuItem";
+            this.area1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area1ToolStripMenuItem.Text = "Area 1";
+            this.area1ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
-            // Area2Button
+            // area2ToolStripMenuItem
             // 
-            this.Area2Button.Name = "Area2Button";
-            this.Area2Button.Size = new System.Drawing.Size(107, 22);
-            this.Area2Button.Text = "Area 2";
-            this.Area2Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area2ToolStripMenuItem.Name = "area2ToolStripMenuItem";
+            this.area2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area2ToolStripMenuItem.Text = "Area 2";
+            this.area2ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
-            // Area3Button
+            // area3ToolStripMenuItem
             // 
-            this.Area3Button.Name = "Area3Button";
-            this.Area3Button.Size = new System.Drawing.Size(107, 22);
-            this.Area3Button.Text = "Area 3";
-            this.Area3Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area3ToolStripMenuItem.Name = "area3ToolStripMenuItem";
+            this.area3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area3ToolStripMenuItem.Text = "Area 3";
+            this.area3ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
-            // Area4Button
+            // area4ToolStripMenuItem
             // 
-            this.Area4Button.Name = "Area4Button";
-            this.Area4Button.Size = new System.Drawing.Size(107, 22);
-            this.Area4Button.Text = "Area 4";
-            this.Area4Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area4ToolStripMenuItem.Name = "area4ToolStripMenuItem";
+            this.area4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area4ToolStripMenuItem.Text = "Area 4";
+            this.area4ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
-            // Area5Button
+            // area5ToolStripMenuItem
             // 
-            this.Area5Button.Name = "Area5Button";
-            this.Area5Button.Size = new System.Drawing.Size(107, 22);
-            this.Area5Button.Text = "Area 5";
-            this.Area5Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area5ToolStripMenuItem.Name = "area5ToolStripMenuItem";
+            this.area5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area5ToolStripMenuItem.Text = "Area 5";
+            this.area5ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
-            // Area6Button
+            // area6ToolStripMenuItem
             // 
-            this.Area6Button.Name = "Area6Button";
-            this.Area6Button.Size = new System.Drawing.Size(107, 22);
-            this.Area6Button.Text = "Area 6";
-            this.Area6Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area6ToolStripMenuItem.Name = "area6ToolStripMenuItem";
+            this.area6ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area6ToolStripMenuItem.Text = "Area 6";
+            this.area6ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
-            // Area7Button
+            // area7ToolStripMenuItem
             // 
-            this.Area7Button.Name = "Area7Button";
-            this.Area7Button.Size = new System.Drawing.Size(107, 22);
-            this.Area7Button.Text = "Area 7";
-            this.Area7Button.Click += new System.EventHandler(this.AreaButton_Click);
+            this.area7ToolStripMenuItem.Name = "area7ToolStripMenuItem";
+            this.area7ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area7ToolStripMenuItem.Text = "Area 7";
+            this.area7ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -1003,14 +1003,14 @@
         private System.Windows.Forms.CheckBox keepOnGround;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem objectComboPresetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem Area0Button;
-        private System.Windows.Forms.ToolStripMenuItem Area1Button;
-        private System.Windows.Forms.ToolStripMenuItem Area2Button;
-        private System.Windows.Forms.ToolStripMenuItem Area3Button;
-        private System.Windows.Forms.ToolStripMenuItem Area4Button;
-        private System.Windows.Forms.ToolStripMenuItem Area5Button;
-        private System.Windows.Forms.ToolStripMenuItem Area6Button;
-        private System.Windows.Forms.ToolStripMenuItem Area7Button;
+        private System.Windows.Forms.ToolStripMenuItem area0ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem area1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem area2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem area3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem area4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem area5ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem area6ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem area7ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem testROMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scriptsDumpToolStripMenuItem;
