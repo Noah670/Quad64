@@ -97,6 +97,34 @@ namespace Quad64
             myTimer.Enabled = false;
             cameraMode.SelectedIndex = 0;
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new CustomToolStripColorTable());
+
+            ROM rom = ROM.Instance;
+            int levelIndex = -1;
+            foreach (KeyValuePair<string, ushort> entry in rom.levelIDs)
+            {
+                levelIndex++;
+                string levelID = entry.Value.ToString("X2");
+                ToolStripMenuItem item = new ToolStripMenuItem();
+                item.Text = entry.Key + " (0x" + levelID + ")";
+                item.Tag = levelIndex;
+                if (levelID == "10")
+                {
+                    item.Checked = true;
+                }
+
+                selectLevelToolStripMenuItem.DropDownItems.Add(item);
+            }
+
+            foreach (ushort entry in rom.extra_levelIDs)
+            {
+                levelIndex++;
+                string levelID = entry.ToString("X2");
+                ToolStripMenuItem item = new ToolStripMenuItem();
+                item.Text = "[EXT] Extra Level (0x" + " (0x" + levelID + ")";
+                item.Tag = levelIndex;
+
+                selectLevelToolStripMenuItem.DropDownItems.Add(item);
+            }
         }
         
         // New functions for MainForm.cs
@@ -980,17 +1008,37 @@ namespace Quad64
             }
         }
 
-        private void selectLeveToolStripMenuItem_Click(object sender, EventArgs e)
+        //private void selectLevelToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    SelectLevelForm newLevel = new SelectLevelForm(level.LevelID);
+        //    newLevel.ShowDialog();
+        //    if (newLevel.changeLevel)
+        //    {
+        //        switchLevel(newLevel.levelID);
+        //    }
+        //}
+
+        private void SelectLevelToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            //Console.WriteLine("Opening SelectLevelForm!");
-            SelectLevelForm newLevel = new SelectLevelForm(level.LevelID);
-            newLevel.ShowDialog();
-            if (newLevel.changeLevel)
+            // Close MenuStrip
+            selectLevelToolStripMenuItem.Owner.Hide();
+
+            ToolStripMenuItem clickedItem = (ToolStripMenuItem)e.ClickedItem;
+
+            // Find currently checked item and uncheck it
+            foreach (ToolStripMenuItem item in selectLevelToolStripMenuItem.DropDownItems)
             {
-                switchLevel(newLevel.levelID);
+                if (item.Checked == true)
+                {
+                    item.Checked = false;
+                }
             }
+            clickedItem.Checked = true;
+
+            int levelIndex = (int)clickedItem.Tag;
+            switchLevel(ROM.Instance.getLevelIdFromIndex(levelIndex));
         }
-        
+
         private void testROMToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LaunchROM.OpenEmulator();

@@ -50,7 +50,7 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.objectComboNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.levelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.selectLeveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Area0Button = new System.Windows.Forms.ToolStripMenuItem();
             this.Area1Button = new System.Windows.Forms.ToolStripMenuItem();
@@ -135,7 +135,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(174, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(294, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -295,7 +295,7 @@
             this.levelToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.levelToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.levelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.selectLeveToolStripMenuItem,
+            this.selectLevelToolStripMenuItem,
             this.selectAreaToolStripMenuItem,
             this.toolStripSeparator2,
             this.texturesToolStripMenuItem1});
@@ -304,12 +304,12 @@
             this.levelToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.levelToolStripMenuItem.Text = "Level";
             // 
-            // selectLeveToolStripMenuItem
+            // selectLevelToolStripMenuItem
             // 
-            this.selectLeveToolStripMenuItem.Name = "selectLeveToolStripMenuItem";
-            this.selectLeveToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.selectLeveToolStripMenuItem.Text = "Select Level";
-            this.selectLeveToolStripMenuItem.Click += new System.EventHandler(this.selectLeveToolStripMenuItem_Click);
+            this.selectLevelToolStripMenuItem.Name = "selectLevelToolStripMenuItem";
+            this.selectLevelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectLevelToolStripMenuItem.Text = "Select Level";
+            this.selectLevelToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.SelectLevelToolStripMenuItem_DropDownItemClicked);
             // 
             // selectAreaToolStripMenuItem
             // 
@@ -323,7 +323,7 @@
             this.Area6Button,
             this.Area7Button});
             this.selectAreaToolStripMenuItem.Name = "selectAreaToolStripMenuItem";
-            this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.selectAreaToolStripMenuItem.Text = "Select Area";
             // 
             // Area0Button
@@ -385,13 +385,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(132, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             this.toolStripSeparator2.Paint += new System.Windows.Forms.PaintEventHandler(this.ToolStripSeparator_Paint);
             // 
             // texturesToolStripMenuItem1
             // 
             this.texturesToolStripMenuItem1.Name = "texturesToolStripMenuItem1";
-            this.texturesToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.texturesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.texturesToolStripMenuItem1.Text = "Textures";
             this.texturesToolStripMenuItem1.Click += new System.EventHandler(this.texturesToolStripMenuItem_Click);
             // 
@@ -973,7 +973,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem selectLeveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectLevelToolStripMenuItem;
         private System.Windows.Forms.PropertyGrid propertyGrid1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
