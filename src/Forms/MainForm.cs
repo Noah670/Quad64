@@ -932,14 +932,14 @@ namespace Quad64
             int areas = 0x00;
             foreach (Area area in level.Areas)
                 areas |= (1 << area.AreaID);
-            area0ToolStripMenuItem.Enabled = ((areas & 0x1) == 0x1);
-            area1ToolStripMenuItem.Enabled = ((areas & 0x2) == 0x2);
-            area2ToolStripMenuItem.Enabled = ((areas & 0x4) == 0x4);
-            area3ToolStripMenuItem.Enabled = ((areas & 0x8) == 0x8);
-            area4ToolStripMenuItem.Enabled = ((areas & 0x10) == 0x10);
-            area5ToolStripMenuItem.Enabled = ((areas & 0x20) == 0x20);
-            area6ToolStripMenuItem.Enabled = ((areas & 0x40) == 0x40);
-            area7ToolStripMenuItem.Enabled = ((areas & 0x80) == 0x80);
+            area0ToolStripMenuItem.Visible = ((areas & 0x1) == 0x1);
+            area1ToolStripMenuItem.Visible = ((areas & 0x2) == 0x2);
+            area2ToolStripMenuItem.Visible = ((areas & 0x4) == 0x4);
+            area3ToolStripMenuItem.Visible = ((areas & 0x8) == 0x8);
+            area4ToolStripMenuItem.Visible = ((areas & 0x10) == 0x10);
+            area5ToolStripMenuItem.Visible = ((areas & 0x20) == 0x20);
+            area6ToolStripMenuItem.Visible = ((areas & 0x40) == 0x40);
+            area7ToolStripMenuItem.Visible = ((areas & 0x80) == 0x80);
         }
 
         private void updateTriangleCount()
