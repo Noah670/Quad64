@@ -330,6 +330,7 @@
             // 
             this.area0ToolStripMenuItem.Name = "area0ToolStripMenuItem";
             this.area0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area0ToolStripMenuItem.Tag = "0";
             this.area0ToolStripMenuItem.Text = "Area 0";
             this.area0ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
@@ -337,6 +338,7 @@
             // 
             this.area1ToolStripMenuItem.Name = "area1ToolStripMenuItem";
             this.area1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area1ToolStripMenuItem.Tag = "1";
             this.area1ToolStripMenuItem.Text = "Area 1";
             this.area1ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
@@ -344,6 +346,7 @@
             // 
             this.area2ToolStripMenuItem.Name = "area2ToolStripMenuItem";
             this.area2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area2ToolStripMenuItem.Tag = "2";
             this.area2ToolStripMenuItem.Text = "Area 2";
             this.area2ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
@@ -351,6 +354,7 @@
             // 
             this.area3ToolStripMenuItem.Name = "area3ToolStripMenuItem";
             this.area3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area3ToolStripMenuItem.Tag = "3";
             this.area3ToolStripMenuItem.Text = "Area 3";
             this.area3ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
@@ -358,6 +362,7 @@
             // 
             this.area4ToolStripMenuItem.Name = "area4ToolStripMenuItem";
             this.area4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area4ToolStripMenuItem.Tag = "4";
             this.area4ToolStripMenuItem.Text = "Area 4";
             this.area4ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
@@ -365,6 +370,7 @@
             // 
             this.area5ToolStripMenuItem.Name = "area5ToolStripMenuItem";
             this.area5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area5ToolStripMenuItem.Tag = "5";
             this.area5ToolStripMenuItem.Text = "Area 5";
             this.area5ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
@@ -372,6 +378,7 @@
             // 
             this.area6ToolStripMenuItem.Name = "area6ToolStripMenuItem";
             this.area6ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area6ToolStripMenuItem.Tag = "6";
             this.area6ToolStripMenuItem.Text = "Area 6";
             this.area6ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 
@@ -379,6 +386,7 @@
             // 
             this.area7ToolStripMenuItem.Name = "area7ToolStripMenuItem";
             this.area7ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area7ToolStripMenuItem.Tag = "6";
             this.area7ToolStripMenuItem.Text = "Area 7";
             this.area7ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
             // 

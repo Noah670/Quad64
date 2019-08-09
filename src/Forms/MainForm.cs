@@ -239,7 +239,7 @@ namespace Quad64
             glControl1.Enabled = true;
             bgColor = Color.CornflowerBlue;
             camera.setLevel(level);
-            updateAreaButtons();
+            UpdateAreaItems();
 
             rom.hasLookedAtLevelIDs = true;
 
@@ -927,11 +927,12 @@ namespace Quad64
             loadROM(Globals.autoLoadROMOnStartup);
         }
 
-        private void updateAreaButtons()
+        private void UpdateAreaItems()
         {
             int areas = 0x00;
             foreach (Area area in level.Areas)
                 areas |= (1 << area.AreaID);
+            area0ToolStripMenuItem.Visible = ((areas & 0x1) == 0x1);
             area0ToolStripMenuItem.Visible = ((areas & 0x1) == 0x1);
             area1ToolStripMenuItem.Visible = ((areas & 0x2) == 0x2);
             area2ToolStripMenuItem.Visible = ((areas & 0x4) == 0x4);
@@ -940,6 +941,26 @@ namespace Quad64
             area5ToolStripMenuItem.Visible = ((areas & 0x20) == 0x20);
             area6ToolStripMenuItem.Visible = ((areas & 0x40) == 0x40);
             area7ToolStripMenuItem.Visible = ((areas & 0x80) == 0x80);
+
+            area0ToolStripMenuItem.Enabled = ((areas & 0x1) == 0x1);
+            area0ToolStripMenuItem.Enabled = ((areas & 0x1) == 0x1);
+            area1ToolStripMenuItem.Enabled = ((areas & 0x2) == 0x2);
+            area2ToolStripMenuItem.Enabled = ((areas & 0x4) == 0x4);
+            area3ToolStripMenuItem.Enabled = ((areas & 0x8) == 0x8);
+            area4ToolStripMenuItem.Enabled = ((areas & 0x10) == 0x10);
+            area5ToolStripMenuItem.Enabled = ((areas & 0x20) == 0x20);
+            area6ToolStripMenuItem.Enabled = ((areas & 0x40) == 0x40);
+            area7ToolStripMenuItem.Enabled = ((areas & 0x80) == 0x80);
+
+            // Check the first enabled item
+            foreach (ToolStripMenuItem item in selectAreaToolStripMenuItem.DropDownItems)
+            {     
+                if (item.Enabled == true)
+                {
+                    item.Checked = true;
+                    break;
+                }
+            }
         }
 
         private void updateTriangleCount()
@@ -997,7 +1018,7 @@ namespace Quad64
                 refreshObjectsInList();
                 updateTriangleCount();
                 glControl1.Invalidate();
-                updateAreaButtons();
+                UpdateAreaItems();
 
                 forceGC(); // Force garbage collection.
             }
@@ -2165,8 +2186,22 @@ namespace Quad64
         
         private void AreaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ToolStripMenuItem item = (ToolStripMenuItem) sender;
-            ushort area = ushort.Parse(item.Text.Substring(item.Text.LastIndexOf(" ")+1));
+            // Close MenuStrip
+            selectAreaToolStripMenuItem.Owner.Hide();
+
+            ToolStripMenuItem clickedItem = (ToolStripMenuItem) sender;
+
+            // Find currently checked item and uncheck it
+            foreach (ToolStripMenuItem item in selectAreaToolStripMenuItem.DropDownItems)
+            {
+                if (item.Checked == true)
+                {
+                    item.Checked = false;
+                }
+            }
+            clickedItem.Checked = true;
+
+            ushort area = ushort.Parse(clickedItem.Text.Substring(clickedItem.Text.LastIndexOf(" ")+1));
             trySwitchArea(area);
         }
 
