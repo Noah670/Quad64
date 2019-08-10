@@ -39,7 +39,7 @@ namespace Quad64.src.Forms
         private void AddAdvancedSettings()
         {
             int xOffset = 0, yOffset = 10, SeperatorWidth = Advanced.Width - 6;
-            Advanced.Controls.Add(newFancyLabel("Link emulator program", 0,
+            Advanced.Controls.Add(newFancyLabel("Emulator program", 0,
                 yOffset, new Font("Arial", 10, FontStyle.Bold)));
             yOffset += 25;
             addButtonWithTextBox(Advanced, "Browse", Globals.pathToEmulator, true, xOffset, yOffset, Advanced.Width, 
@@ -105,9 +105,6 @@ namespace Quad64.src.Forms
                 new string[] { "No (Decimal Only)", "Yes (Signed Hex)", "Yes (Unsigned Hex)" }, 
                 xOffset, yOffset, (!Globals.useHexadecimal ? 0 : (Globals.useSignedHex ? 1 : 2)));
             useHex = (ComboBox)Basic.Controls[Basic.Controls.Count - 1];
-
-            yOffset += 30;
-            Basic.Controls.Add(newLineSeparator(xOffset, yOffset, SeperatorWidth));
         }
 
         private void trackBar_updateLabelValue(object sender, EventArgs e)
