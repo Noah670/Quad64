@@ -135,7 +135,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(294, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(174, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -307,7 +307,7 @@
             // selectLevelToolStripMenuItem
             // 
             this.selectLevelToolStripMenuItem.Name = "selectLevelToolStripMenuItem";
-            this.selectLevelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectLevelToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.selectLevelToolStripMenuItem.Text = "Select Level";
             this.selectLevelToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.SelectLevelToolStripMenuItem_DropDownItemClicked);
             // 
@@ -323,13 +323,13 @@
             this.area6ToolStripMenuItem,
             this.area7ToolStripMenuItem});
             this.selectAreaToolStripMenuItem.Name = "selectAreaToolStripMenuItem";
-            this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectAreaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.selectAreaToolStripMenuItem.Text = "Select Area";
             // 
             // area0ToolStripMenuItem
             // 
             this.area0ToolStripMenuItem.Name = "area0ToolStripMenuItem";
-            this.area0ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area0ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area0ToolStripMenuItem.Tag = "0";
             this.area0ToolStripMenuItem.Text = "Area 0";
             this.area0ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -337,7 +337,7 @@
             // area1ToolStripMenuItem
             // 
             this.area1ToolStripMenuItem.Name = "area1ToolStripMenuItem";
-            this.area1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area1ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area1ToolStripMenuItem.Tag = "1";
             this.area1ToolStripMenuItem.Text = "Area 1";
             this.area1ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -345,7 +345,7 @@
             // area2ToolStripMenuItem
             // 
             this.area2ToolStripMenuItem.Name = "area2ToolStripMenuItem";
-            this.area2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area2ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area2ToolStripMenuItem.Tag = "2";
             this.area2ToolStripMenuItem.Text = "Area 2";
             this.area2ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -353,7 +353,7 @@
             // area3ToolStripMenuItem
             // 
             this.area3ToolStripMenuItem.Name = "area3ToolStripMenuItem";
-            this.area3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area3ToolStripMenuItem.Tag = "3";
             this.area3ToolStripMenuItem.Text = "Area 3";
             this.area3ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -361,7 +361,7 @@
             // area4ToolStripMenuItem
             // 
             this.area4ToolStripMenuItem.Name = "area4ToolStripMenuItem";
-            this.area4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area4ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area4ToolStripMenuItem.Tag = "4";
             this.area4ToolStripMenuItem.Text = "Area 4";
             this.area4ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -369,7 +369,7 @@
             // area5ToolStripMenuItem
             // 
             this.area5ToolStripMenuItem.Name = "area5ToolStripMenuItem";
-            this.area5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area5ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area5ToolStripMenuItem.Tag = "5";
             this.area5ToolStripMenuItem.Text = "Area 5";
             this.area5ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -377,7 +377,7 @@
             // area6ToolStripMenuItem
             // 
             this.area6ToolStripMenuItem.Name = "area6ToolStripMenuItem";
-            this.area6ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area6ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area6ToolStripMenuItem.Tag = "6";
             this.area6ToolStripMenuItem.Text = "Area 6";
             this.area6ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -385,7 +385,7 @@
             // area7ToolStripMenuItem
             // 
             this.area7ToolStripMenuItem.Name = "area7ToolStripMenuItem";
-            this.area7ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.area7ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.area7ToolStripMenuItem.Tag = "6";
             this.area7ToolStripMenuItem.Text = "Area 7";
             this.area7ToolStripMenuItem.Click += new System.EventHandler(this.AreaToolStripMenuItem_Click);
@@ -393,13 +393,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(132, 6);
             this.toolStripSeparator2.Paint += new System.Windows.Forms.PaintEventHandler(this.ToolStripSeparator_Paint);
             // 
             // texturesToolStripMenuItem1
             // 
             this.texturesToolStripMenuItem1.Name = "texturesToolStripMenuItem1";
-            this.texturesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.texturesToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.texturesToolStripMenuItem1.Text = "Textures";
             this.texturesToolStripMenuItem1.Click += new System.EventHandler(this.texturesToolStripMenuItem_Click);
             // 
@@ -567,7 +567,7 @@
             this.gridSize.BackColor = System.Drawing.SystemColors.Window;
             this.gridSize.Enabled = false;
             this.gridSize.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.gridSize.Location = new System.Drawing.Point(601, 94);
+            this.gridSize.Location = new System.Drawing.Point(592, 97);
             this.gridSize.Minimum = new decimal(new int[] {
             2,
             0,
@@ -591,7 +591,7 @@
             this.grid.BackColor = System.Drawing.Color.Transparent;
             this.grid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grid.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid.Location = new System.Drawing.Point(558, 94);
+            this.grid.Location = new System.Drawing.Point(549, 97);
             this.grid.Name = "grid";
             this.grid.Size = new System.Drawing.Size(46, 20);
             this.grid.TabIndex = 25;
@@ -607,7 +607,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cameraModeLabel.AutoSize = true;
             this.cameraModeLabel.Font = new System.Drawing.Font("Courier New", 8.25F);
-            this.cameraModeLabel.Location = new System.Drawing.Point(557, 46);
+            this.cameraModeLabel.Location = new System.Drawing.Point(548, 51);
             this.cameraModeLabel.Name = "cameraModeLabel";
             this.cameraModeLabel.Size = new System.Drawing.Size(91, 14);
             this.cameraModeLabel.TabIndex = 24;
@@ -630,7 +630,7 @@
             "Right",
             "Front",
             "Back"});
-            this.cameraMode.Location = new System.Drawing.Point(558, 63);
+            this.cameraMode.Location = new System.Drawing.Point(549, 69);
             this.cameraMode.Name = "cameraMode";
             this.cameraMode.Size = new System.Drawing.Size(87, 21);
             this.cameraMode.TabIndex = 23;
@@ -673,7 +673,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.camSpeedPercentageLabel.AutoSize = true;
             this.camSpeedPercentageLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.camSpeedPercentageLabel.Location = new System.Drawing.Point(614, 2);
+            this.camSpeedPercentageLabel.Location = new System.Drawing.Point(576, 16);
             this.camSpeedPercentageLabel.Name = "camSpeedPercentageLabel";
             this.camSpeedPercentageLabel.Size = new System.Drawing.Size(35, 14);
             this.camSpeedPercentageLabel.TabIndex = 12;
@@ -686,11 +686,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cameraSpeedLabel.AutoSize = true;
             this.cameraSpeedLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cameraSpeedLabel.Location = new System.Drawing.Point(557, 2);
+            this.cameraSpeedLabel.Location = new System.Drawing.Point(546, 2);
             this.cameraSpeedLabel.Name = "cameraSpeedLabel";
-            this.cameraSpeedLabel.Size = new System.Drawing.Size(63, 14);
+            this.cameraSpeedLabel.Size = new System.Drawing.Size(98, 14);
             this.cameraSpeedLabel.TabIndex = 11;
-            this.cameraSpeedLabel.Text = "Cam spd:";
+            this.cameraSpeedLabel.Text = "Camera speed:";
             this.cameraSpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // trackBar_camSpeed
@@ -698,7 +698,7 @@
             this.trackBar_camSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar_camSpeed.LargeChange = 10;
-            this.trackBar_camSpeed.Location = new System.Drawing.Point(563, 14);
+            this.trackBar_camSpeed.Location = new System.Drawing.Point(554, 24);
             this.trackBar_camSpeed.Maximum = 100;
             this.trackBar_camSpeed.Name = "trackBar_camSpeed";
             this.trackBar_camSpeed.Size = new System.Drawing.Size(82, 45);
@@ -714,7 +714,7 @@
             this.objSpeedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.objSpeedLabel.AutoSize = true;
             this.objSpeedLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objSpeedLabel.Location = new System.Drawing.Point(286, 13);
+            this.objSpeedLabel.Location = new System.Drawing.Point(284, 16);
             this.objSpeedLabel.Name = "objSpeedLabel";
             this.objSpeedLabel.Size = new System.Drawing.Size(35, 14);
             this.objSpeedLabel.TabIndex = 9;
@@ -726,7 +726,7 @@
             this.moveSpeedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.moveSpeedLabel.AutoSize = true;
             this.moveSpeedLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moveSpeedLabel.Location = new System.Drawing.Point(261, -1);
+            this.moveSpeedLabel.Location = new System.Drawing.Point(264, 2);
             this.moveSpeedLabel.Name = "moveSpeedLabel";
             this.moveSpeedLabel.Size = new System.Drawing.Size(84, 14);
             this.moveSpeedLabel.TabIndex = 8;
@@ -736,7 +736,7 @@
             // trackBar_moveSpeed
             // 
             this.trackBar_moveSpeed.LargeChange = 10;
-            this.trackBar_moveSpeed.Location = new System.Drawing.Point(253, 27);
+            this.trackBar_moveSpeed.Location = new System.Drawing.Point(254, 30);
             this.trackBar_moveSpeed.Maximum = 100;
             this.trackBar_moveSpeed.Name = "trackBar_moveSpeed";
             this.trackBar_moveSpeed.Size = new System.Drawing.Size(94, 45);
@@ -754,7 +754,7 @@
             this.moveCamPanel.Controls.Add(this.moveCameraLabel);
             this.moveCamPanel.Controls.Add(this.moveCam_strafe);
             this.moveCamPanel.Controls.Add(this.moveCam_InOut);
-            this.moveCamPanel.Location = new System.Drawing.Point(432, 2);
+            this.moveCamPanel.Location = new System.Drawing.Point(415, 1);
             this.moveCamPanel.Margin = new System.Windows.Forms.Padding(1);
             this.moveCamPanel.Name = "moveCamPanel";
             this.moveCamPanel.Size = new System.Drawing.Size(125, 118);
@@ -805,7 +805,7 @@
             this.rotateObjectPanel.Controls.Add(this.rotateObjectLabel);
             this.rotateObjectPanel.Controls.Add(this.rotObj);
             this.rotateObjectPanel.Controls.Add(this.rotObj_Yaw);
-            this.rotateObjectPanel.Location = new System.Drawing.Point(127, 2);
+            this.rotateObjectPanel.Location = new System.Drawing.Point(127, 1);
             this.rotateObjectPanel.Margin = new System.Windows.Forms.Padding(1);
             this.rotateObjectPanel.Name = "rotateObjectPanel";
             this.rotateObjectPanel.Size = new System.Drawing.Size(124, 118);
