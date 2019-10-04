@@ -488,7 +488,7 @@
             this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
             this.propertyGrid1.Name = "propertyGrid1";
             this.propertyGrid1.PropertySort = System.Windows.Forms.PropertySort.NoSort;
-            this.propertyGrid1.Size = new System.Drawing.Size(219, 261);
+            this.propertyGrid1.Size = new System.Drawing.Size(233, 261);
             this.propertyGrid1.TabIndex = 0;
             this.propertyGrid1.ToolbarVisible = false;
             this.propertyGrid1.UseCompatibleTextRendering = true;
@@ -513,7 +513,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.glControl1);
             this.splitContainer2.Panel2MinSize = 600;
             this.splitContainer2.Size = new System.Drawing.Size(879, 456);
-            this.splitContainer2.SplitterDistance = 219;
+            this.splitContainer2.SplitterDistance = 233;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.TabStop = false;
             // 
@@ -527,7 +527,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.propertyGrid1);
-            this.splitContainer3.Size = new System.Drawing.Size(219, 456);
+            this.splitContainer3.Size = new System.Drawing.Size(233, 456);
             this.splitContainer3.SplitterDistance = 188;
             this.splitContainer3.TabIndex = 0;
             this.splitContainer3.TabStop = false;
@@ -557,7 +557,7 @@
             this.controlsPanel.MaximumSize = new System.Drawing.Size(10000, 120);
             this.controlsPanel.MinimumSize = new System.Drawing.Size(600, 120);
             this.controlsPanel.Name = "controlsPanel";
-            this.controlsPanel.Size = new System.Drawing.Size(649, 120);
+            this.controlsPanel.Size = new System.Drawing.Size(635, 120);
             this.controlsPanel.TabIndex = 5;
             // 
             // gridSize
@@ -567,7 +567,7 @@
             this.gridSize.BackColor = System.Drawing.SystemColors.Window;
             this.gridSize.Enabled = false;
             this.gridSize.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.gridSize.Location = new System.Drawing.Point(592, 97);
+            this.gridSize.Location = new System.Drawing.Point(578, 97);
             this.gridSize.Minimum = new decimal(new int[] {
             2,
             0,
@@ -591,7 +591,7 @@
             this.grid.BackColor = System.Drawing.Color.Transparent;
             this.grid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grid.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid.Location = new System.Drawing.Point(549, 97);
+            this.grid.Location = new System.Drawing.Point(535, 97);
             this.grid.Name = "grid";
             this.grid.Size = new System.Drawing.Size(46, 20);
             this.grid.TabIndex = 25;
@@ -607,7 +607,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cameraModeLabel.AutoSize = true;
             this.cameraModeLabel.Font = new System.Drawing.Font("Courier New", 8.25F);
-            this.cameraModeLabel.Location = new System.Drawing.Point(548, 51);
+            this.cameraModeLabel.Location = new System.Drawing.Point(534, 51);
             this.cameraModeLabel.Name = "cameraModeLabel";
             this.cameraModeLabel.Size = new System.Drawing.Size(91, 14);
             this.cameraModeLabel.TabIndex = 24;
@@ -630,7 +630,7 @@
             "Right",
             "Front",
             "Back"});
-            this.cameraMode.Location = new System.Drawing.Point(549, 69);
+            this.cameraMode.Location = new System.Drawing.Point(535, 69);
             this.cameraMode.Name = "cameraMode";
             this.cameraMode.Size = new System.Drawing.Size(87, 21);
             this.cameraMode.TabIndex = 23;
@@ -673,7 +673,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.camSpeedPercentageLabel.AutoSize = true;
             this.camSpeedPercentageLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.camSpeedPercentageLabel.Location = new System.Drawing.Point(576, 16);
+            this.camSpeedPercentageLabel.Location = new System.Drawing.Point(562, 16);
             this.camSpeedPercentageLabel.Name = "camSpeedPercentageLabel";
             this.camSpeedPercentageLabel.Size = new System.Drawing.Size(35, 14);
             this.camSpeedPercentageLabel.TabIndex = 12;
@@ -686,7 +686,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cameraSpeedLabel.AutoSize = true;
             this.cameraSpeedLabel.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cameraSpeedLabel.Location = new System.Drawing.Point(546, 2);
+            this.cameraSpeedLabel.Location = new System.Drawing.Point(532, 2);
             this.cameraSpeedLabel.Name = "cameraSpeedLabel";
             this.cameraSpeedLabel.Size = new System.Drawing.Size(98, 14);
             this.cameraSpeedLabel.TabIndex = 11;
@@ -698,7 +698,7 @@
             this.trackBar_camSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar_camSpeed.LargeChange = 10;
-            this.trackBar_camSpeed.Location = new System.Drawing.Point(554, 24);
+            this.trackBar_camSpeed.Location = new System.Drawing.Point(540, 24);
             this.trackBar_camSpeed.Maximum = 100;
             this.trackBar_camSpeed.Name = "trackBar_camSpeed";
             this.trackBar_camSpeed.Size = new System.Drawing.Size(82, 45);
@@ -754,7 +754,7 @@
             this.moveCamPanel.Controls.Add(this.moveCameraLabel);
             this.moveCamPanel.Controls.Add(this.moveCam_strafe);
             this.moveCamPanel.Controls.Add(this.moveCam_InOut);
-            this.moveCamPanel.Location = new System.Drawing.Point(415, 1);
+            this.moveCamPanel.Location = new System.Drawing.Point(401, 1);
             this.moveCamPanel.Margin = new System.Windows.Forms.Padding(1);
             this.moveCamPanel.Name = "moveCamPanel";
             this.moveCamPanel.Size = new System.Drawing.Size(125, 118);
@@ -908,7 +908,7 @@
             this.glControl1.Location = new System.Drawing.Point(3, 2);
             this.glControl1.MinimumSize = new System.Drawing.Size(600, 120);
             this.glControl1.Name = "glControl1";
-            this.glControl1.Size = new System.Drawing.Size(649, 329);
+            this.glControl1.Size = new System.Drawing.Size(635, 329);
             this.glControl1.TabIndex = 0;
             this.glControl1.TabStop = false;
             this.glControl1.VSync = false;
