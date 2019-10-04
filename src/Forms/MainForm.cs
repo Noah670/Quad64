@@ -250,6 +250,18 @@ namespace Quad64
             triangleCount.Visible = true;
             glControl1.Invalidate();
 
+            if (!Text.Contains("-"))
+            {
+                // No ROM has been loaded before, so append ROM name
+                Text += $" - {rom.getROMFileName()}";
+            }
+            else
+            {
+                // A ROM has been loaded before, so replace filename
+                Text = Text.Split('-')[0];
+                Text += $" - {rom.getROMFileName()}";
+            }
+
             forceGC(); // Force garbage collection.
         }
 
