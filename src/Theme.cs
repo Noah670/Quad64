@@ -179,7 +179,7 @@ namespace Quad64.src
             MAIN_TREEVIEW_WARPS = Color.FromArgb(0, 0, 0);
 
             MAIN_PROPERTIES_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
-            MAIN_PROPERTIES_LINES = Color.FromArgb(0xA9, 0xA9, 0xA9);
+            MAIN_PROPERTIES_LINES = Color.FromArgb(220, 220, 220);
             MAIN_PROPERTIES_TEXT = Color.FromArgb(0, 0, 0);
 
             MAIN_CONTROLS_BACKGROUND = Color.FromArgb(240, 240, 240);
