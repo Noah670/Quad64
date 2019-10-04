@@ -247,6 +247,7 @@ namespace Quad64
             //Console.WriteLine("Startup time: " + stopWatch.Elapsed.Milliseconds + "ms");
 
             updateTriangleCount();
+            triangleCount.Visible = true;
             glControl1.Invalidate();
 
             forceGC(); // Force garbage collection.
