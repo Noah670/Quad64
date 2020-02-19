@@ -127,8 +127,17 @@
   <data name="MoveObject" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\MoveObject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_Star1_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_Star1_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StartupBG-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\StartupBG-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RotateObject_Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\RotateObject_Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_Star1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_Star1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MoveObject_Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\MoveObject_Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,10 +145,10 @@
   <data name="MoveCamera_Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\MoveCamera_Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_Star1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_Star1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="quad64-transp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quad64-transp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_Star1_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_Star1_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StartupBG_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\StartupBG-Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

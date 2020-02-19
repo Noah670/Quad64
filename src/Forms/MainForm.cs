@@ -212,7 +212,7 @@ namespace Quad64
 
                 openFileDialog1.Filter = "Z64 ROM|*.z64|V64 ROM|*.v64|N64 ROM|*.n64|All Files|*";
                 DialogResult result = openFileDialog1.ShowDialog();
-                if (result == DialogResult.OK) // Test result.
+                if (result == DialogResult.OK)
                 {
                     ROM.Instance.readFile(openFileDialog1.FileName);
                 }
@@ -937,7 +937,7 @@ namespace Quad64
                 Close();
             }
             Console.WriteLine("Using OpenGL " + glString);
-            loadROM(Globals.autoLoadROMOnStartup);
+            loadROM(true);
         }
 
         private void UpdateAreaItems()

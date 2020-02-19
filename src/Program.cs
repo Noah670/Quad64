@@ -16,7 +16,7 @@ namespace Quad64
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new StartupForm());
         }
     }
 }

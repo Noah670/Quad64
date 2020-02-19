@@ -88,14 +88,14 @@
             this.trackBar_moveSpeed = new System.Windows.Forms.TrackBar();
             this.moveCamPanel = new System.Windows.Forms.Panel();
             this.moveCameraLabel = new System.Windows.Forms.Label();
-            this.moveCam_strafe = new System.Windows.Forms.PictureBox();
-            this.moveCam_InOut = new System.Windows.Forms.PictureBox();
             this.rotateObjectPanel = new System.Windows.Forms.Panel();
             this.rotateObjectLabel = new System.Windows.Forms.Label();
-            this.rotObj = new System.Windows.Forms.PictureBox();
-            this.rotObj_Yaw = new System.Windows.Forms.PictureBox();
             this.moveObjectPanel = new System.Windows.Forms.Panel();
             this.moveObjectLabel = new System.Windows.Forms.Label();
+            this.moveCam_strafe = new System.Windows.Forms.PictureBox();
+            this.moveCam_InOut = new System.Windows.Forms.PictureBox();
+            this.rotObj = new System.Windows.Forms.PictureBox();
+            this.rotObj_Yaw = new System.Windows.Forms.PictureBox();
             this.moveObj = new System.Windows.Forms.PictureBox();
             this.movObj_UpDown = new System.Windows.Forms.PictureBox();
             this.glControl1 = new OpenTK.GLControl();
@@ -113,12 +113,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_camSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_moveSpeed)).BeginInit();
             this.moveCamPanel.SuspendLayout();
+            this.rotateObjectPanel.SuspendLayout();
+            this.moveObjectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moveCam_strafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveCam_InOut)).BeginInit();
-            this.rotateObjectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rotObj)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rotObj_Yaw)).BeginInit();
-            this.moveObjectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moveObj)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movObj_UpDown)).BeginInit();
             this.SuspendLayout();
@@ -770,6 +770,50 @@
             this.moveCameraLabel.TabIndex = 4;
             this.moveCameraLabel.Text = "Move Camera";
             // 
+            // rotateObjectPanel
+            // 
+            this.rotateObjectPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.rotateObjectPanel.Controls.Add(this.rotateObjectLabel);
+            this.rotateObjectPanel.Controls.Add(this.rotObj);
+            this.rotateObjectPanel.Controls.Add(this.rotObj_Yaw);
+            this.rotateObjectPanel.Location = new System.Drawing.Point(127, 1);
+            this.rotateObjectPanel.Margin = new System.Windows.Forms.Padding(1);
+            this.rotateObjectPanel.Name = "rotateObjectPanel";
+            this.rotateObjectPanel.Size = new System.Drawing.Size(124, 118);
+            this.rotateObjectPanel.TabIndex = 5;
+            // 
+            // rotateObjectLabel
+            // 
+            this.rotateObjectLabel.AutoSize = true;
+            this.rotateObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rotateObjectLabel.Location = new System.Drawing.Point(8, 99);
+            this.rotateObjectLabel.Name = "rotateObjectLabel";
+            this.rotateObjectLabel.Size = new System.Drawing.Size(112, 16);
+            this.rotateObjectLabel.TabIndex = 4;
+            this.rotateObjectLabel.Text = "Rotate Object";
+            // 
+            // moveObjectPanel
+            // 
+            this.moveObjectPanel.Controls.Add(this.moveObjectLabel);
+            this.moveObjectPanel.Controls.Add(this.moveObj);
+            this.moveObjectPanel.Controls.Add(this.movObj_UpDown);
+            this.moveObjectPanel.Location = new System.Drawing.Point(1, 2);
+            this.moveObjectPanel.Margin = new System.Windows.Forms.Padding(1);
+            this.moveObjectPanel.Name = "moveObjectPanel";
+            this.moveObjectPanel.Size = new System.Drawing.Size(124, 120);
+            this.moveObjectPanel.TabIndex = 4;
+            // 
+            // moveObjectLabel
+            // 
+            this.moveObjectLabel.AutoSize = true;
+            this.moveObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moveObjectLabel.Location = new System.Drawing.Point(8, 99);
+            this.moveObjectLabel.Name = "moveObjectLabel";
+            this.moveObjectLabel.Size = new System.Drawing.Size(96, 16);
+            this.moveObjectLabel.TabIndex = 4;
+            this.moveObjectLabel.Text = "Move Object";
+            // 
             // moveCam_strafe
             // 
             this.moveCam_strafe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("moveCam_strafe.BackgroundImage")));
@@ -798,29 +842,6 @@
             this.moveCam_InOut.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveCam_InOut_MouseMove);
             this.moveCam_InOut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveCam_InOut_MouseUp);
             // 
-            // rotateObjectPanel
-            // 
-            this.rotateObjectPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.rotateObjectPanel.Controls.Add(this.rotateObjectLabel);
-            this.rotateObjectPanel.Controls.Add(this.rotObj);
-            this.rotateObjectPanel.Controls.Add(this.rotObj_Yaw);
-            this.rotateObjectPanel.Location = new System.Drawing.Point(127, 1);
-            this.rotateObjectPanel.Margin = new System.Windows.Forms.Padding(1);
-            this.rotateObjectPanel.Name = "rotateObjectPanel";
-            this.rotateObjectPanel.Size = new System.Drawing.Size(124, 118);
-            this.rotateObjectPanel.TabIndex = 5;
-            // 
-            // rotateObjectLabel
-            // 
-            this.rotateObjectLabel.AutoSize = true;
-            this.rotateObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotateObjectLabel.Location = new System.Drawing.Point(8, 99);
-            this.rotateObjectLabel.Name = "rotateObjectLabel";
-            this.rotateObjectLabel.Size = new System.Drawing.Size(112, 16);
-            this.rotateObjectLabel.TabIndex = 4;
-            this.rotateObjectLabel.Text = "Rotate Object";
-            // 
             // rotObj
             // 
             this.rotObj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rotObj.BackgroundImage")));
@@ -848,27 +869,6 @@
             this.rotObj_Yaw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rotObj_Yaw_MouseDown);
             this.rotObj_Yaw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rotObj_Yaw_MouseMove);
             this.rotObj_Yaw.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rotObj_Yaw_MouseUp);
-            // 
-            // moveObjectPanel
-            // 
-            this.moveObjectPanel.Controls.Add(this.moveObjectLabel);
-            this.moveObjectPanel.Controls.Add(this.moveObj);
-            this.moveObjectPanel.Controls.Add(this.movObj_UpDown);
-            this.moveObjectPanel.Location = new System.Drawing.Point(1, 2);
-            this.moveObjectPanel.Margin = new System.Windows.Forms.Padding(1);
-            this.moveObjectPanel.Name = "moveObjectPanel";
-            this.moveObjectPanel.Size = new System.Drawing.Size(124, 120);
-            this.moveObjectPanel.TabIndex = 4;
-            // 
-            // moveObjectLabel
-            // 
-            this.moveObjectLabel.AutoSize = true;
-            this.moveObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moveObjectLabel.Location = new System.Drawing.Point(8, 99);
-            this.moveObjectLabel.Name = "moveObjectLabel";
-            this.moveObjectLabel.Size = new System.Drawing.Size(96, 16);
-            this.moveObjectLabel.TabIndex = 4;
-            this.moveObjectLabel.Text = "Move Object";
             // 
             // moveObj
             // 
@@ -936,7 +936,7 @@
             this.MinimumSize = new System.Drawing.Size(820, 522);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quad64 v0.3";
+            this.Text = "Quad64";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.menuStrip1.ResumeLayout(false);
@@ -957,14 +957,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_moveSpeed)).EndInit();
             this.moveCamPanel.ResumeLayout(false);
             this.moveCamPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.moveCam_strafe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moveCam_InOut)).EndInit();
             this.rotateObjectPanel.ResumeLayout(false);
             this.rotateObjectPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rotObj)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rotObj_Yaw)).EndInit();
             this.moveObjectPanel.ResumeLayout(false);
             this.moveObjectPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moveCam_strafe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moveCam_InOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rotObj)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rotObj_Yaw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveObj)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.movObj_UpDown)).EndInit();
             this.ResumeLayout(false);

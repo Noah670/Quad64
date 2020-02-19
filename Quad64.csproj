@@ -54,7 +54,7 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon_KtQ_icon.ico</ApplicationIcon>
+    <ApplicationIcon>quad64.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -85,6 +85,12 @@
     </Compile>
     <Compile Include="src\Forms\EditWarp.Designer.cs">
       <DependentUpon>EditWarp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\StartupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\StartupForm.Designer.cs">
+      <DependentUpon>StartupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Forms\MultiselectTree\MultiselectTreeView.cs">
       <SubType>Component</SubType>
@@ -258,6 +264,9 @@
     <EmbeddedResource Include="src\Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\StartupForm.resx">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\TextureEditor.resx">
       <DependentUpon>TextureEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +338,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="icon_KtQ_icon.ico" />
+    <Content Include="images\quad64-transp.png" />
+    <Content Include="images\StartupBG-Black.png" />
+    <Content Include="quad64.ico" />
+    <None Include="Resources\quad64-transp.png" />
+    <None Include="images\StartupBG-White.png" />
     <None Include="Resources\icon_Star1_gray.png" />
     <None Include="Resources\icon_Star1.png" />
   </ItemGroup>

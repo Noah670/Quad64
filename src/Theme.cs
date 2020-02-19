@@ -312,9 +312,9 @@ namespace Quad64.src
         public static void LoadColorsFromJSONFile(string filepath)
         {
             Form mainForm = null;
-            if (MainForm.ActiveForm != null)
+            if (StartupForm.ActiveForm != null)
             {
-                mainForm = MainForm.ActiveForm;
+                mainForm = StartupForm.ActiveForm;
                 mainForm.Hide();           
             }
 
