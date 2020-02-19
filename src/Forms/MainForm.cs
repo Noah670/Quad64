@@ -2225,6 +2225,7 @@ namespace Quad64
                 DialogResult saveResult = Prompts.ShowShouldSaveDialog();
                 e.Cancel = (saveResult == DialogResult.Cancel);
             }
+            Application.Exit();
         }
 
         private void texturesToolStripMenuItem_Click(object sender, EventArgs e)
