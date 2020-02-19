@@ -81,7 +81,7 @@
             this.quad64Logo.Location = new System.Drawing.Point(12, 9);
             this.quad64Logo.Name = "quad64Logo";
             this.quad64Logo.Size = new System.Drawing.Size(48, 48);
-            this.quad64Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.quad64Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.quad64Logo.TabIndex = 4;
             this.quad64Logo.TabStop = false;
             // 
