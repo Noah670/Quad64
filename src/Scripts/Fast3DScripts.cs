@@ -90,6 +90,7 @@ namespace Quad64.src.Scripts
             byte[] data = rom.getSegment(seg, areaID);
             if (data == null) return;
             bool end = false;
+            bool useUVOffsetFix = true;
             while (!end)
             {
                 if (off + 8 > data.Length)
@@ -123,7 +124,7 @@ namespace Quad64.src.Scripts
                     case CMD.F3D_VTX:
                         switchTextureStatus(ref mdl, ref tempMaterial, false, areaID);
                         //if (tempMaterial.id != 0) return;
-                        if(!F3D_VTX(vertices, ref lvl, cmd, ref desc, areaID))
+                        if(!F3D_VTX(vertices, ref lvl, cmd, ref desc, areaID, useUVOffsetFix))
                             return;
                         break;
                     case CMD.F3D_DL:
@@ -195,6 +196,9 @@ namespace Quad64.src.Scripts
                         switchTextureStatus(ref mdl, ref tempMaterial, true, areaID);
                         G_SETTIMG(ref tempMaterial, cmd, ref desc);
                         break;
+                    case CMD.F3D_SETOTHERMODE_H:
+                        processSetOtherMode_H(cmd, ref useUVOffsetFix);
+                        break;
                 }
                 if(!alreadyAdded)
                     addF3DCommandToDump(ref mdl, cmd, seg, off, desc, areaID);
@@ -202,6 +206,12 @@ namespace Quad64.src.Scripts
             }
         }
 
+        private static void processSetOtherMode_H(byte[] cmd, ref bool useOffsetUVsFix)
+        {
+            uint bits = bytesToInt(cmd, 4, 4);
+            bool useNearestNeighbor = (bits & 0x2000u) == 0u;
+            useOffsetUVsFix = !useNearestNeighbor;
+        }
 
         private static void addF3DCommandToDump(ref Model3D mdl, byte[] cmd, byte seg, uint offset, string description, byte? areaID)
         {
@@ -275,7 +285,7 @@ namespace Quad64.src.Scripts
             }
         }
 
-        private static bool F3D_VTX(F3D_Vertex[] vertices, ref Level lvl, byte[] cmd, ref string desc, byte? areaID)
+        private static bool F3D_VTX(F3D_Vertex[] vertices, ref Level lvl, byte[] cmd, ref string desc, byte? areaID, bool useOffsetUVsFix)
         {
             ROM rom = ROM.Instance;
             int amount = ((cmd[2] << 8) | cmd[3]) / 0x10;
@@ -299,6 +309,12 @@ namespace Quad64.src.Scripts
                 vertices[i].ny_g = vData[i * 0x10 + 13];
                 vertices[i].nz_b = vData[i * 0x10 + 14];
                 vertices[i].a = vData[i * 0x10 + 15];
+
+                if (useOffsetUVsFix)
+                {
+                    vertices[i].u += 16;
+                    vertices[i].v += 16;
+                }
             }
             return true;
         }
