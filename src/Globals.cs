@@ -27,6 +27,7 @@ namespace Quad64
         // Editor Options
         public static bool autoLoadROMOnStartup = false;
         public static string pathToAutoLoadROM = "";
+        public static Stack<string> lastUsedROMs = new Stack<string>();
         public static bool useHexadecimal = false;
         public static bool useSignedHex = false;
 

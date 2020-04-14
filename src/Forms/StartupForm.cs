@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Quad64.src.JSON;
 using Quad64.src;
 using System.IO;
+using System.Xml;
 
 namespace Quad64
 {
@@ -13,10 +14,48 @@ namespace Quad64
         {
             InitializeComponent();
             SettingsFile.LoadGlobalSettings("default");
-            updateTheme();
+            UpdateTheme();
+            
+            if (Globals.lastUsedROMs.Count > 0)
+            {
+                noROMsOpenedLabel.Visible = false;
+                int x = noROMsOpenedLabel.Location.X;
+                int y = noROMsOpenedLabel.Location.Y;
+
+                foreach (string romPath in Globals.lastUsedROMs)
+                {
+                    string romFileName = Path.GetFileNameWithoutExtension(romPath);
+                    
+                    if (romFileName.EndsWith(".ext"))
+                    {
+                        romFileName = romFileName.Substring(0, romFileName.Length - 4);
+                    }
+
+                    LinkLabel romLink = new LinkLabel();
+                    romLink.Font = new Font("Microsoft Sans Serif", 10);
+                    romLink.AutoSize = true;
+                    romLink.Text = romFileName;
+
+                    if (Path.GetFileNameWithoutExtension(Theme.lastThemePath) == "dark") 
+                        romLink.LinkColor = Color.White;
+                    else
+                        romLink.LinkColor = Color.Black;
+
+                    romLink.BackColor = Color.Transparent;
+                    romLink.Location = new Point(x, y);
+                    y = y + 15;
+
+                    romLink.Click += (s, e) =>
+                    {
+                        OpenROM(romPath);
+                    };
+
+                    Controls.Add(romLink);
+                }
+            }
         }
 
-        private void updateTheme()
+        private void UpdateTheme()
         {
             if (Path.GetFileNameWithoutExtension(Theme.lastThemePath) == "dark")
             {
@@ -27,12 +66,12 @@ namespace Quad64
             }
         }
 
-        private void closeLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void CloseLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void openROMButton_Click(object sender, EventArgs e)
+        private void OpenROMButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
@@ -41,14 +80,29 @@ namespace Quad64
 
             if (result == DialogResult.OK)
             {
-                Hide();
-                ROM.Instance.readFile(openFileDialog1.FileName);
-                Globals.pathToAutoLoadROM = openFileDialog1.FileName;
-                Globals.autoLoadROMOnStartup = true;
-
-                MainForm m = new MainForm();
-                m.Show();
+                OpenROM(openFileDialog1.FileName);
             }
+        }
+
+        private void OpenROM(string path)
+        {
+            Hide();
+            ROM.Instance.readFile(path);
+            Globals.pathToAutoLoadROM = path;
+            Globals.autoLoadROMOnStartup = true;
+
+            if (!Globals.lastUsedROMs.Contains(path))
+            {
+                if (Globals.lastUsedROMs.Count > 5)
+                {
+                    Globals.lastUsedROMs.Pop();
+                }
+                Globals.lastUsedROMs.Push(path);
+                SettingsFile.SaveGlobalSettings("default");
+            }
+
+            MainForm m = new MainForm();
+            m.Show();
         }
     }
 }

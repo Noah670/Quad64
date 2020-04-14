@@ -18,6 +18,7 @@ namespace Quad64.src.JSON
             s["RenderCollisionMap"] = Globals.renderCollisionMap.ToString();
             s["AutoLoadROMFile"] = Globals.autoLoadROMOnStartup.ToString();
             s["LastROMFile"] = Globals.pathToAutoLoadROM;
+            s["LastUsedROMs"] = JArray.FromObject(Globals.lastUsedROMs);
             s["EnableHex"] = Globals.useHexadecimal.ToString();
             s["SignedHex"] = Globals.useSignedHex.ToString();
             s["EmulatorPath"] = Globals.pathToEmulator;
@@ -49,6 +50,8 @@ namespace Quad64.src.JSON
                     Globals.autoLoadROMOnStartup = bool.Parse(o["AutoLoadROMFile"].ToString());
                 if (o["LastROMFile"] != null)
                     Globals.pathToAutoLoadROM = o["LastROMFile"].ToString();
+                if (o["LastUsedROMs"] != null)
+                    Globals.lastUsedROMs = JArray.Parse(o["LastUsedROMs"].ToString()).ToObject<Stack<string>>();
                 if (o["EnableHex"] != null)
                     Globals.useHexadecimal = bool.Parse(o["EnableHex"].ToString());
                 if (o["SignedHex"] != null)

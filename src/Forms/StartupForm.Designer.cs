@@ -55,11 +55,11 @@
             // 
             this.recentROMsLabel.AutoSize = true;
             this.recentROMsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.recentROMsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recentROMsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recentROMsLabel.ForeColor = System.Drawing.Color.Red;
             this.recentROMsLabel.Location = new System.Drawing.Point(12, 89);
             this.recentROMsLabel.Name = "recentROMsLabel";
-            this.recentROMsLabel.Size = new System.Drawing.Size(158, 17);
+            this.recentROMsLabel.Size = new System.Drawing.Size(198, 20);
             this.recentROMsLabel.TabIndex = 1;
             this.recentROMsLabel.Text = "Recently opened ROMs";
             // 
@@ -89,10 +89,10 @@
             // 
             this.noROMsOpenedLabel.AutoSize = true;
             this.noROMsOpenedLabel.BackColor = System.Drawing.Color.Transparent;
-            this.noROMsOpenedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noROMsOpenedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noROMsOpenedLabel.Location = new System.Drawing.Point(12, 118);
             this.noROMsOpenedLabel.Name = "noROMsOpenedLabel";
-            this.noROMsOpenedLabel.Size = new System.Drawing.Size(283, 32);
+            this.noROMsOpenedLabel.Size = new System.Drawing.Size(303, 34);
             this.noROMsOpenedLabel.TabIndex = 5;
             this.noROMsOpenedLabel.Text = "You have not opened any ROMs yet. \r\nClick the Open ROM button below to open one!";
             // 
@@ -107,7 +107,7 @@
             this.openROMButton.TabIndex = 6;
             this.openROMButton.Text = "Open ROM";
             this.openROMButton.UseVisualStyleBackColor = false;
-            this.openROMButton.Click += new System.EventHandler(this.openROMButton_Click);
+            this.openROMButton.Click += new System.EventHandler(this.OpenROMButton_Click);
             // 
             // closeLink
             // 
@@ -121,7 +121,7 @@
             this.closeLink.TabIndex = 7;
             this.closeLink.TabStop = true;
             this.closeLink.Text = "X";
-            this.closeLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.closeLink_LinkClicked);
+            this.closeLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CloseLink_LinkClicked);
             // 
             // StartupForm
             // 
