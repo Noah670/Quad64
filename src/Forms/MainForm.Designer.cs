@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recentROMsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveROMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveROMAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -88,14 +89,14 @@
             this.trackBar_moveSpeed = new System.Windows.Forms.TrackBar();
             this.moveCamPanel = new System.Windows.Forms.Panel();
             this.moveCameraLabel = new System.Windows.Forms.Label();
-            this.rotateObjectPanel = new System.Windows.Forms.Panel();
-            this.rotateObjectLabel = new System.Windows.Forms.Label();
-            this.moveObjectPanel = new System.Windows.Forms.Panel();
-            this.moveObjectLabel = new System.Windows.Forms.Label();
             this.moveCam_strafe = new System.Windows.Forms.PictureBox();
             this.moveCam_InOut = new System.Windows.Forms.PictureBox();
+            this.rotateObjectPanel = new System.Windows.Forms.Panel();
+            this.rotateObjectLabel = new System.Windows.Forms.Label();
             this.rotObj = new System.Windows.Forms.PictureBox();
             this.rotObj_Yaw = new System.Windows.Forms.PictureBox();
+            this.moveObjectPanel = new System.Windows.Forms.Panel();
+            this.moveObjectLabel = new System.Windows.Forms.Label();
             this.moveObj = new System.Windows.Forms.PictureBox();
             this.movObj_UpDown = new System.Windows.Forms.PictureBox();
             this.glControl1 = new OpenTK.GLControl();
@@ -113,12 +114,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_camSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_moveSpeed)).BeginInit();
             this.moveCamPanel.SuspendLayout();
-            this.rotateObjectPanel.SuspendLayout();
-            this.moveObjectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moveCam_strafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveCam_InOut)).BeginInit();
+            this.rotateObjectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rotObj)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rotObj_Yaw)).BeginInit();
+            this.moveObjectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moveObj)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movObj_UpDown)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +136,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(174, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(294, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -144,6 +145,7 @@
             this.fileToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadROMToolStripMenuItem,
+            this.recentROMsToolStripMenuItem,
             this.saveROMToolStripMenuItem,
             this.saveROMAsToolStripMenuItem,
             this.toolStripSeparator3,
@@ -155,21 +157,27 @@
             // loadROMToolStripMenuItem
             // 
             this.loadROMToolStripMenuItem.Name = "loadROMToolStripMenuItem";
-            this.loadROMToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.loadROMToolStripMenuItem.Text = "Load ROM";
+            this.loadROMToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.loadROMToolStripMenuItem.Text = "Open ROM";
             this.loadROMToolStripMenuItem.Click += new System.EventHandler(this.loadROMToolStripMenuItem_Click);
+            // 
+            // recentROMsToolStripMenuItem
+            // 
+            this.recentROMsToolStripMenuItem.Name = "recentROMsToolStripMenuItem";
+            this.recentROMsToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.recentROMsToolStripMenuItem.Text = "Recently opened ROMs";
             // 
             // saveROMToolStripMenuItem
             // 
             this.saveROMToolStripMenuItem.Name = "saveROMToolStripMenuItem";
-            this.saveROMToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.saveROMToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.saveROMToolStripMenuItem.Text = "Save ROM";
             this.saveROMToolStripMenuItem.Click += new System.EventHandler(this.saveROMToolStripMenuItem_Click);
             // 
             // saveROMAsToolStripMenuItem
             // 
             this.saveROMAsToolStripMenuItem.Name = "saveROMAsToolStripMenuItem";
-            this.saveROMAsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.saveROMAsToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.saveROMAsToolStripMenuItem.Text = "Save ROM as...";
             this.saveROMAsToolStripMenuItem.Click += new System.EventHandler(this.saveROMAsToolStripMenuItem_Click);
             // 
@@ -177,13 +185,13 @@
             // 
             this.toolStripSeparator3.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(148, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(194, 6);
             this.toolStripSeparator3.Paint += new System.Windows.Forms.PaintEventHandler(this.ToolStripSeparator_Paint);
             // 
             // testROMToolStripMenuItem
             // 
             this.testROMToolStripMenuItem.Name = "testROMToolStripMenuItem";
-            this.testROMToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.testROMToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.testROMToolStripMenuItem.Text = "Launch ROM";
             this.testROMToolStripMenuItem.Click += new System.EventHandler(this.testROMToolStripMenuItem_Click);
             // 
@@ -770,50 +778,6 @@
             this.moveCameraLabel.TabIndex = 4;
             this.moveCameraLabel.Text = "Move Camera";
             // 
-            // rotateObjectPanel
-            // 
-            this.rotateObjectPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.rotateObjectPanel.Controls.Add(this.rotateObjectLabel);
-            this.rotateObjectPanel.Controls.Add(this.rotObj);
-            this.rotateObjectPanel.Controls.Add(this.rotObj_Yaw);
-            this.rotateObjectPanel.Location = new System.Drawing.Point(127, 1);
-            this.rotateObjectPanel.Margin = new System.Windows.Forms.Padding(1);
-            this.rotateObjectPanel.Name = "rotateObjectPanel";
-            this.rotateObjectPanel.Size = new System.Drawing.Size(124, 118);
-            this.rotateObjectPanel.TabIndex = 5;
-            // 
-            // rotateObjectLabel
-            // 
-            this.rotateObjectLabel.AutoSize = true;
-            this.rotateObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rotateObjectLabel.Location = new System.Drawing.Point(8, 99);
-            this.rotateObjectLabel.Name = "rotateObjectLabel";
-            this.rotateObjectLabel.Size = new System.Drawing.Size(112, 16);
-            this.rotateObjectLabel.TabIndex = 4;
-            this.rotateObjectLabel.Text = "Rotate Object";
-            // 
-            // moveObjectPanel
-            // 
-            this.moveObjectPanel.Controls.Add(this.moveObjectLabel);
-            this.moveObjectPanel.Controls.Add(this.moveObj);
-            this.moveObjectPanel.Controls.Add(this.movObj_UpDown);
-            this.moveObjectPanel.Location = new System.Drawing.Point(1, 2);
-            this.moveObjectPanel.Margin = new System.Windows.Forms.Padding(1);
-            this.moveObjectPanel.Name = "moveObjectPanel";
-            this.moveObjectPanel.Size = new System.Drawing.Size(124, 120);
-            this.moveObjectPanel.TabIndex = 4;
-            // 
-            // moveObjectLabel
-            // 
-            this.moveObjectLabel.AutoSize = true;
-            this.moveObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moveObjectLabel.Location = new System.Drawing.Point(8, 99);
-            this.moveObjectLabel.Name = "moveObjectLabel";
-            this.moveObjectLabel.Size = new System.Drawing.Size(96, 16);
-            this.moveObjectLabel.TabIndex = 4;
-            this.moveObjectLabel.Text = "Move Object";
-            // 
             // moveCam_strafe
             // 
             this.moveCam_strafe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("moveCam_strafe.BackgroundImage")));
@@ -842,6 +806,29 @@
             this.moveCam_InOut.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveCam_InOut_MouseMove);
             this.moveCam_InOut.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveCam_InOut_MouseUp);
             // 
+            // rotateObjectPanel
+            // 
+            this.rotateObjectPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.rotateObjectPanel.Controls.Add(this.rotateObjectLabel);
+            this.rotateObjectPanel.Controls.Add(this.rotObj);
+            this.rotateObjectPanel.Controls.Add(this.rotObj_Yaw);
+            this.rotateObjectPanel.Location = new System.Drawing.Point(127, 1);
+            this.rotateObjectPanel.Margin = new System.Windows.Forms.Padding(1);
+            this.rotateObjectPanel.Name = "rotateObjectPanel";
+            this.rotateObjectPanel.Size = new System.Drawing.Size(124, 118);
+            this.rotateObjectPanel.TabIndex = 5;
+            // 
+            // rotateObjectLabel
+            // 
+            this.rotateObjectLabel.AutoSize = true;
+            this.rotateObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rotateObjectLabel.Location = new System.Drawing.Point(8, 99);
+            this.rotateObjectLabel.Name = "rotateObjectLabel";
+            this.rotateObjectLabel.Size = new System.Drawing.Size(112, 16);
+            this.rotateObjectLabel.TabIndex = 4;
+            this.rotateObjectLabel.Text = "Rotate Object";
+            // 
             // rotObj
             // 
             this.rotObj.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rotObj.BackgroundImage")));
@@ -869,6 +856,27 @@
             this.rotObj_Yaw.MouseDown += new System.Windows.Forms.MouseEventHandler(this.rotObj_Yaw_MouseDown);
             this.rotObj_Yaw.MouseMove += new System.Windows.Forms.MouseEventHandler(this.rotObj_Yaw_MouseMove);
             this.rotObj_Yaw.MouseUp += new System.Windows.Forms.MouseEventHandler(this.rotObj_Yaw_MouseUp);
+            // 
+            // moveObjectPanel
+            // 
+            this.moveObjectPanel.Controls.Add(this.moveObjectLabel);
+            this.moveObjectPanel.Controls.Add(this.moveObj);
+            this.moveObjectPanel.Controls.Add(this.movObj_UpDown);
+            this.moveObjectPanel.Location = new System.Drawing.Point(1, 2);
+            this.moveObjectPanel.Margin = new System.Windows.Forms.Padding(1);
+            this.moveObjectPanel.Name = "moveObjectPanel";
+            this.moveObjectPanel.Size = new System.Drawing.Size(124, 120);
+            this.moveObjectPanel.TabIndex = 4;
+            // 
+            // moveObjectLabel
+            // 
+            this.moveObjectLabel.AutoSize = true;
+            this.moveObjectLabel.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moveObjectLabel.Location = new System.Drawing.Point(8, 99);
+            this.moveObjectLabel.Name = "moveObjectLabel";
+            this.moveObjectLabel.Size = new System.Drawing.Size(96, 16);
+            this.moveObjectLabel.TabIndex = 4;
+            this.moveObjectLabel.Text = "Move Object";
             // 
             // moveObj
             // 
@@ -957,14 +965,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_moveSpeed)).EndInit();
             this.moveCamPanel.ResumeLayout(false);
             this.moveCamPanel.PerformLayout();
-            this.rotateObjectPanel.ResumeLayout(false);
-            this.rotateObjectPanel.PerformLayout();
-            this.moveObjectPanel.ResumeLayout(false);
-            this.moveObjectPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moveCam_strafe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveCam_InOut)).EndInit();
+            this.rotateObjectPanel.ResumeLayout(false);
+            this.rotateObjectPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rotObj)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rotObj_Yaw)).EndInit();
+            this.moveObjectPanel.ResumeLayout(false);
+            this.moveObjectPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moveObj)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.movObj_UpDown)).EndInit();
             this.ResumeLayout(false);
@@ -1042,6 +1050,7 @@
         private System.Windows.Forms.NumericUpDown gridSize;
         private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
         private System.Windows.Forms.Label triangleCount;
+        private System.Windows.Forms.ToolStripMenuItem recentROMsToolStripMenuItem;
     }
 }
 

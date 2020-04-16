@@ -14,6 +14,7 @@ using System.Runtime.InteropServices;
 using Quad64.src.Forms.ToolStripRenderer;
 using System.IO;
 using Newtonsoft.Json;
+using Quad64.Properties;
 
 namespace Quad64
 {
@@ -81,7 +82,6 @@ namespace Quad64
             OpenTK.Toolkit.Init();
             glControl1.CreateControl();
             SettingsFile.LoadGlobalSettings("default");
-            updateTheme();
             glControl1.MouseWheel += new MouseEventHandler(glControl1_Wheel);
             ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(
                 Globals.FOV * ((float)Math.PI / 180.0f), 
@@ -126,6 +126,13 @@ namespace Quad64
 
                 selectLevelToolStripMenuItem.DropDownItems.Add(item);
             }
+
+            foreach (string romPath in Globals.lastUsedROMs)
+            {
+                recentROMsToolStripMenuItem.DropDownItems.Add(new ToolStripMenuItem(romPath));
+            }
+
+            updateTheme();
         }
         
         // New functions for MainForm.cs
