@@ -125,7 +125,7 @@ namespace Quad64.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap quad64_transp {
             get {
-                object obj = ResourceManager.GetObject("quad64-transp", resourceCulture);
+                object obj = ResourceManager.GetObject("quad64_transp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

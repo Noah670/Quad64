@@ -54,7 +54,8 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>quad64.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -338,7 +339,6 @@
     <Content Include="data\themes\Making Themes.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="icon_KtQ_icon.ico" />
     <Content Include="images\quad64-transp.png" />
     <Content Include="images\StartupBG-Black.png" />
     <Content Include="quad64.ico" />

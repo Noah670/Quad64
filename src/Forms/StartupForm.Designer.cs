@@ -77,7 +77,7 @@
             // quad64Logo
             // 
             this.quad64Logo.BackColor = System.Drawing.Color.Transparent;
-            this.quad64Logo.Image = global::Quad64.Properties.Resources.quad64_transp;
+            this.quad64Logo.Image = ((System.Drawing.Image)(resources.GetObject("quad64Logo.Image")));
             this.quad64Logo.Location = new System.Drawing.Point(12, 9);
             this.quad64Logo.Name = "quad64Logo";
             this.quad64Logo.Size = new System.Drawing.Size(48, 48);
