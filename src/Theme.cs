@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Drawing;
 using System.IO;
 using Newtonsoft.Json.Linq;
@@ -28,6 +25,13 @@ namespace Quad64.src
         public static Color DEFAULT_BUTTON_TEXT;
         public static Color DEFAULT_UPDOWN_BACKGROUND;
         public static Color DEFAULT_UPDOWN_TEXT;
+
+        /******************** Startup Form Specifics ********************/
+        public static bool START_DARK = false;
+        public static Color START_TEXT;
+        public static Color START_TITLE_TEXT;
+        public static Color START_CONTROLS_BUTTON_TEXT;
+        public static Color START_CONTROLS_BUTTON_BACKGROUND;
 
         /******************** Main Form Specifics ********************/
         public static Color MAIN_BACKGROUND;
@@ -149,7 +153,7 @@ namespace Quad64.src
         public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_BACKGROUND;
         public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_TEXT;
 
-        public static void SetColors()
+        public static void SetDefaultColors()
         {
             DEFAULT_BACKGROUND = Color.FromArgb(255, 255, 255);
             DEFAULT_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
@@ -167,6 +171,11 @@ namespace Quad64.src
             DEFAULT_BUTTON_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
             DEFAULT_UPDOWN_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
             DEFAULT_UPDOWN_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
+
+            START_TEXT = DEFAULT_TEXT;
+            START_TITLE_TEXT = Color.Red;
+            START_CONTROLS_BUTTON_TEXT = Color.Yellow;
+            START_CONTROLS_BUTTON_BACKGROUND = Color.Red;
 
             MAIN_BACKGROUND = Color.FromArgb(255, 255, 255);
 
@@ -319,7 +328,7 @@ namespace Quad64.src
             }
 
             // Reset colors
-            SetColors();
+            SetDefaultColors();
 
             if (filepath == "")
             {
@@ -350,6 +359,19 @@ namespace Quad64.src
                     LoadColor(ref DEFAULT_BUTTON_TEXT, DEFAULT_BUTTON_TEXT, o["Defaults"]["Button-Text"]);
                     LoadColor(ref DEFAULT_UPDOWN_BACKGROUND, DEFAULT_UPDOWN_BACKGROUND, o["Defaults"]["NumericUpDown-Background"]);
                     LoadColor(ref DEFAULT_UPDOWN_TEXT, DEFAULT_UPDOWN_TEXT, o["Defaults"]["NumericUpDown-Text"]);
+                }
+
+                if (o["Start"] != null)
+                {
+                    if (o["Start"]["Dark-Mode"] != null)
+                    {
+                        START_DARK = o["Start"]["Dark-Mode"].Value<bool>();
+                    }
+
+                    LoadColor(ref START_TEXT, DEFAULT_TEXT, o["Start"]["Text"]);
+                    LoadColor(ref START_TITLE_TEXT, Color.Red, o["Start"]["Title-Text"]);
+                    LoadColor(ref START_CONTROLS_BUTTON_TEXT, Color.Yellow, o["Start"]["Controls-Button-Text"]);
+                    LoadColor(ref START_CONTROLS_BUTTON_BACKGROUND, Color.Red, o["Start"]["Controls-Button-Background"]);
                 }
 
                 if (o["ScriptDumps"] != null)

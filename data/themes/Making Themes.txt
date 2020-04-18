@@ -26,6 +26,13 @@ Button-Text
 NumericUpDown-Background
 NumericUpDown-Text
 
+[Start]
+Dark-Mode (true/false)
+Text
+Title-Text
+Controls-Button-Background
+Controls-Button-Text
+
 [Main]
 Background
 Controls-Background

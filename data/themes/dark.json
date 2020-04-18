@@ -4,7 +4,14 @@
 		"Author" : "Davideesk",
 		"Note" : "This theme does not show every possible option you can change, so please look at 'Making Themes.txt' for more information!"
 	},
-	
+
+	"Start": {
+		"Dark-Mode": true,
+		"Text": { "R":255, "G":255, "B":255 },
+		"Controls-Button-Background": { "R":0, "G":0, "B":0 },
+		"Controls-Button-Text":  { "R":255, "G":255, "B":255 }
+	},
+
 	"Defaults" : {
 		"Background" : { "R":40, "G":40, "B":40 },
 		"Text" : { "R":240, "G":240, "B":240 },

@@ -57,13 +57,20 @@ namespace Quad64
 
         private void UpdateTheme()
         {
-            if (Path.GetFileNameWithoutExtension(Theme.lastThemePath) == "dark")
+            if (Theme.START_DARK)
             {
                 BackgroundImage = Properties.Resources.StartupBG_Black;
-                noROMsOpenedLabel.ForeColor = Color.White;
-                openROMButton.BackColor = Color.Black;
-                openROMButton.ForeColor = Color.White;
             }
+
+            noROMsOpenedLabel.ForeColor = Theme.START_TEXT;
+            versionLabel.ForeColor = Theme.START_TEXT;
+
+            quad64Label.ForeColor = Theme.START_TITLE_TEXT;
+            recentROMsLabel.ForeColor = Theme.START_TITLE_TEXT;
+            closeLink.LinkColor = Theme.START_TITLE_TEXT;
+
+            openROMButton.BackColor = Theme.START_CONTROLS_BUTTON_BACKGROUND;
+            openROMButton.ForeColor = Theme.START_CONTROLS_BUTTON_TEXT;
         }
 
         private void CloseLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
