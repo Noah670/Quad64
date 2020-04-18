@@ -8,6 +8,11 @@ namespace Quad64.src
 {
     class Theme
     {
+        public static string lastThemePath = "";
+
+        #region Color variables
+
+        #region Defaults
         /*** Default colors to fallback on if a specific color is not defined ***/
         public static Color DEFAULT_BACKGROUND;
         public static Color DEFAULT_TEXT;
@@ -25,14 +30,18 @@ namespace Quad64.src
         public static Color DEFAULT_BUTTON_TEXT;
         public static Color DEFAULT_UPDOWN_BACKGROUND;
         public static Color DEFAULT_UPDOWN_TEXT;
+        #endregion
 
+        #region Startup
         /******************** Startup Form Specifics ********************/
         public static bool START_DARK = false;
         public static Color START_TEXT;
         public static Color START_TITLE_TEXT;
         public static Color START_CONTROLS_BUTTON_TEXT;
         public static Color START_CONTROLS_BUTTON_BACKGROUND;
+        #endregion
 
+        #region Main
         /******************** Main Form Specifics ********************/
         public static Color MAIN_BACKGROUND;
 
@@ -62,7 +71,9 @@ namespace Quad64.src
         public static Color MAIN_MENUBAR_BACKGROUND;
         public static Color MAIN_MENUBAR_ITEM_SELECTED;
         public static Color MAIN_MENUBAR_ITEM_HIGHLIGHT;
+        #endregion
 
+        #region Object Combos
         /******************** Object Combo Specifics ********************/
 
         public static Color COMBOS_BACKGROUND;
@@ -91,7 +102,9 @@ namespace Quad64.src
         public static Color COMBOS_OTHER_SECONDARY;
         public static Color COMBOS_OTHER_HIGHLIGHT;
         public static Color COMBOS_OTHER_HIGHLIGHT_TEXT;
+        #endregion
 
+        #region Texture Editor
         /******************** Texture Editor Specifics ********************/
         public static Color TEXTURES_BACKGROUND;
 
@@ -114,7 +127,9 @@ namespace Quad64.src
         public static Color TEXTURES_SKY_BUTTON_TEXT;
         public static Color TEXTURES_SKY_BACKGROUND_LEFT;
         public static Color TEXTURES_SKY_BACKGROUND_RIGHT;
+        #endregion
 
+        #region Script Dumps
         /******************** Script Dumps Specifics ********************/
         public static Color SCRIPTDUMPS_BACKGROUND;
         public static Color SCRIPTDUMPS_TEXT;
@@ -152,7 +167,11 @@ namespace Quad64.src
 
         public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_BACKGROUND;
         public static Color SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_TEXT;
+        #endregion
 
+        #endregion
+
+        #region SetDefaultColors()
         public static void SetDefaultColors()
         {
             DEFAULT_BACKGROUND = Color.FromArgb(255, 255, 255);
@@ -292,7 +311,9 @@ namespace Quad64.src
             SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_BACKGROUND = Color.FromArgb(0xF0, 0xF0, 0xF0);
             SCRIPTDUMPS_OBJECTSTAB_SORT_DROPDOWNLIST_TEXT = Color.FromArgb(0x00, 0x00, 0x00);
         }
+        #endregion
 
+        #region LoadColor()
         public static void LoadColor(ref Color color, Color default_color, JToken token)
         {
             if (token != null)
@@ -315,9 +336,9 @@ namespace Quad64.src
             // Load failed, so use default color instead.
             color = default_color;
         }
+        #endregion
 
-        public static string lastThemePath = "";
-
+        #region LoadColorsFromJSONFile()
         public static void LoadColorsFromJSONFile(string filepath)
         {
             Form mainForm = null;
@@ -341,6 +362,7 @@ namespace Quad64.src
 
                 string json = File.ReadAllText(filepath);
                 JObject o = JObject.Parse(json);
+
                 if (o["Defaults"] != null)
                 {
                     LoadColor(ref DEFAULT_BACKGROUND, DEFAULT_BACKGROUND, o["Defaults"]["Background"]);
@@ -512,5 +534,6 @@ namespace Quad64.src
                 mainForm.Show();
             }
         }
+        #endregion
     }
 }
