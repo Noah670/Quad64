@@ -208,11 +208,12 @@ namespace Quad64
             dropToGround.ForeColor = Theme.MAIN_CONTROLS_BUTTON_TEXT;
             keepOnGround.BackColor = Color.Transparent;
             keepOnGround.ForeColor = Theme.MAIN_CONTROLS_BUTTON_TEXT;
-            grid.BackColor = Color.Transparent;
-            grid.ForeColor = Theme.MAIN_CONTROLS_BUTTON_TEXT;
 
             gridSize.BackColor = Theme.MAIN_CONTROLS_UPDOWN_BACKGROUND;
             gridSize.ForeColor = Theme.MAIN_CONTROLS_UPDOWN_TEXT;
+
+            grid.BackColor = Color.Transparent;
+            grid.ForeColor = Theme.DEFAULT_TEXT;
 
             menuStrip1.BackColor = Theme.MAIN_MENUBAR_BACKGROUND;
             menuStrip1.ForeColor = Theme.MAIN_MENUBAR_TEXT;

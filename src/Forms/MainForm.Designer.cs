@@ -597,8 +597,8 @@
             this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.BackColor = System.Drawing.Color.Transparent;
-            this.grid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grid.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid.ForeColor = System.Drawing.SystemColors.ControlText;
             this.grid.Location = new System.Drawing.Point(535, 97);
             this.grid.Name = "grid";
             this.grid.Size = new System.Drawing.Size(46, 20);
@@ -648,7 +648,6 @@
             // keepOnGround
             // 
             this.keepOnGround.BackColor = System.Drawing.Color.Transparent;
-            this.keepOnGround.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.keepOnGround.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.keepOnGround.Location = new System.Drawing.Point(260, 94);
             this.keepOnGround.Margin = new System.Windows.Forms.Padding(0);
