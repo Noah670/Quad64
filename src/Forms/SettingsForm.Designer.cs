@@ -29,48 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
-            this.tabs = new System.Windows.Forms.TabControl();
-            this.Basic = new System.Windows.Forms.TabPage();
-            this.Advanced = new System.Windows.Forms.TabPage();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.tabs = new Manina.Windows.Forms.TabControl();
+            this.basicTab = new Manina.Windows.Forms.Tab();
+            this.advancedTab = new Manina.Windows.Forms.Tab();
             this.tabs.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabs
-            // 
-            this.tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabs.Controls.Add(this.Basic);
-            this.tabs.Controls.Add(this.Advanced);
-            this.tabs.Location = new System.Drawing.Point(0, 0);
-            this.tabs.Name = "tabs";
-            this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(474, 287);
-            this.tabs.TabIndex = 0;
-            this.tabs.TabStop = false;
-            // 
-            // Basic
-            // 
-            this.Basic.AutoScroll = true;
-            this.Basic.BackColor = System.Drawing.Color.White;
-            this.Basic.Location = new System.Drawing.Point(4, 22);
-            this.Basic.Name = "Basic";
-            this.Basic.Padding = new System.Windows.Forms.Padding(3);
-            this.Basic.Size = new System.Drawing.Size(466, 261);
-            this.Basic.TabIndex = 0;
-            this.Basic.Text = "Basic";
-            // 
-            // Advanced
-            // 
-            this.Advanced.BackColor = System.Drawing.Color.White;
-            this.Advanced.Location = new System.Drawing.Point(4, 22);
-            this.Advanced.Name = "Advanced";
-            this.Advanced.Padding = new System.Windows.Forms.Padding(3);
-            this.Advanced.Size = new System.Drawing.Size(466, 261);
-            this.Advanced.TabIndex = 1;
-            this.Advanced.Text = "Advanced";
             // 
             // saveButton
             // 
@@ -98,15 +63,41 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // tabs
+            // 
+            this.tabs.Controls.Add(this.basicTab);
+            this.tabs.Controls.Add(this.advancedTab);
+            this.tabs.Location = new System.Drawing.Point(0, 0);
+            this.tabs.Name = "tabs";
+            this.tabs.SelectedIndex = 1;
+            this.tabs.Size = new System.Drawing.Size(472, 283);
+            this.tabs.TabIndex = 3;
+            this.tabs.Tabs.Add(this.basicTab);
+            this.tabs.Tabs.Add(this.advancedTab);
+            // 
+            // basicTab
+            // 
+            this.basicTab.Location = new System.Drawing.Point(1, 21);
+            this.basicTab.Name = "basicTab";
+            this.basicTab.Size = new System.Drawing.Size(470, 261);
+            this.basicTab.Text = "Basic";
+            // 
+            // advancedTab
+            // 
+            this.advancedTab.Location = new System.Drawing.Point(1, 21);
+            this.advancedTab.Name = "advancedTab";
+            this.advancedTab.Size = new System.Drawing.Size(470, 261);
+            this.advancedTab.Text = "Advanced";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(472, 317);
+            this.Controls.Add(this.tabs);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.tabs);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -122,11 +113,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabs;
-        private System.Windows.Forms.TabPage Basic;
-        private System.Windows.Forms.TabPage Advanced;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button cancelButton;
+        private Manina.Windows.Forms.TabControl tabs;
+        private Manina.Windows.Forms.Tab basicTab;
+        private Manina.Windows.Forms.Tab advancedTab;
     }
 }

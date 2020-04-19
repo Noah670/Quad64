@@ -1,4 +1,5 @@
-﻿using OpenTK.Graphics.OpenGL;
+﻿using Manina.Windows.Forms;
+using OpenTK.Graphics.OpenGL;
 using Quad64.src.JSON;
 using Quad64.src.TestROM;
 using System;
@@ -14,6 +15,14 @@ namespace Quad64.src.Forms
 {
     public partial class SettingsForm : Form
     {
+        private TextBox emuPathTextBox;
+        private Button setEmuPathButton;
+        private CheckBox autoSaveWithEmulatorBox;
+        private CheckBox enableWireframe, enableBFculling, drawObjMdls, autoLoadROM;
+        private ComboBox renderMap, useHex;
+        private TrackBar fovBar;
+        private Label fovBarDisplay = new Label();
+
         public SettingsForm()
         {
             InitializeComponent();
@@ -21,35 +30,40 @@ namespace Quad64.src.Forms
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            AddBasicSettings();
-            AddAdvancedSettings();
+            AddBasicTabSettings();
+            AddAdvancedTabSettings();
+
+            //var tabRenderer = new Manina.Windows.Forms.TabControl.TabControlRenderer(tabs);
+            //tabRenderer.
+            //tabs.Renderer = tabRenderer;
+
+            basicTab.ForeColor = Theme.DEFAULT_TEXT;
+            basicTab.BackColor = Theme.MAIN_MENUBAR_BACKGROUND;
+            advancedTab.BackColor = Theme.MAIN_MENUBAR_BACKGROUND;
+            advancedTab.ForeColor = Theme.DEFAULT_TEXT;
 
             BackColor = Theme.DEFAULT_BACKGROUND;
-            Basic.BackColor = Theme.DEFAULT_BACKGROUND;
-            Advanced.BackColor = Theme.DEFAULT_BACKGROUND;
+
             saveButton.BackColor = Theme.DEFAULT_BUTTON_BACKGROUND;
             saveButton.ForeColor = Theme.DEFAULT_BUTTON_TEXT;
             cancelButton.BackColor = Theme.DEFAULT_BUTTON_BACKGROUND;
             cancelButton.ForeColor = Theme.DEFAULT_BUTTON_TEXT;
         }
 
-        private TextBox emuPathTextBox;
-        private Button setEmuPathButton;
-        private CheckBox autoSaveWithEmulatorBox;
-        private void AddAdvancedSettings()
+        private void AddAdvancedTabSettings()
         {
-            int xOffset = 0, yOffset = 10, SeperatorWidth = Advanced.Width - 6;
-            Advanced.Controls.Add(newFancyLabel("Emulator program", 0,
+            int xOffset = 0, yOffset = 10, SeperatorWidth = advancedTab.Width - 6;
+            advancedTab.Controls.Add(newFancyLabel("Emulator program", 0,
                 yOffset, new Font("Arial", 10, FontStyle.Bold)));
             yOffset += 25;
-            addButtonWithTextBox(Advanced, "Browse", Globals.pathToEmulator, true, xOffset, yOffset, Advanced.Width, 
+            AddButtonWithTextBox(tabs.Tabs[1], "Browse", Globals.pathToEmulator, true, xOffset, yOffset, advancedTab.Width, 
                 ref emuPathTextBox, ref setEmuPathButton, OpenEmulatorPath_Click);
             yOffset += 30;
-            Advanced.Controls.Add(newCheckBox("Automatically save ROM when launching emulator", xOffset, yOffset, Globals.autoSaveWhenClickEmulator));
-            autoSaveWithEmulatorBox = (CheckBox)Advanced.Controls[Advanced.Controls.Count - 1];
+            advancedTab.Controls.Add(newCheckBox("Automatically save ROM when launching emulator", xOffset, yOffset, Globals.autoSaveWhenClickEmulator));
+            autoSaveWithEmulatorBox = (CheckBox)advancedTab.Controls[advancedTab.Controls.Count - 1];
         }
 
-        private void addButtonWithTextBox(TabPage page, string buttonText, string textBoxText, bool isTextBoxReadOnly, int x, int y, int screenWidth, ref TextBox box, ref Button button, EventHandler buttonClickEvent)
+        private void AddButtonWithTextBox(Page page, string buttonText, string textBoxText, bool isTextBoxReadOnly, int x, int y, int screenWidth, ref TextBox box, ref Button button, EventHandler buttonClickEvent)
         {
             button = newButton(buttonText, x, y, buttonClickEvent);
             box = newTextBox(textBoxText, isTextBoxReadOnly, x + button.Width, y+1, screenWidth-button.Width-3);
@@ -62,49 +76,45 @@ namespace Quad64.src.Forms
             LaunchROM.setEmulatorPath();
             emuPathTextBox.Text = Globals.pathToEmulator;
         }
-        
-        private CheckBox enableWireframe, enableBFculling, drawObjMdls, autoLoadROM;
-        private ComboBox renderMap, useHex;
-        private TrackBar fovBar;
-        private Label fovBarDisplay = new Label();
-        private void AddBasicSettings()
-        {
-            int xOffset = 3, yOffset = 5, SeperatorWidth = Basic.Width - 6;
 
-            Basic.Controls.Add(newFancyLabel("Render Settings", 0, 
+        private void AddBasicTabSettings()
+        {
+            int xOffset = 3, yOffset = 5, SeperatorWidth = basicTab.Width - 6;
+
+            basicTab.Controls.Add(newFancyLabel("Render Settings", 0, 
                 yOffset, new Font("Arial", 10, FontStyle.Bold)));
             yOffset += 25;
-            Basic.Controls.Add(newCheckBox("Enable wireframe", xOffset, yOffset, Globals.doWireframe));
-            enableWireframe = (CheckBox)Basic.Controls[Basic.Controls.Count - 1];
+            basicTab.Controls.Add(newCheckBox("Enable wireframe", xOffset, yOffset, Globals.doWireframe));
+            enableWireframe = (CheckBox)basicTab.Controls[basicTab.Controls.Count - 1];
             yOffset += 25;
-            Basic.Controls.Add(newCheckBox("Enable backface culling", xOffset, yOffset, Globals.doBackfaceCulling));
-            enableBFculling = (CheckBox)Basic.Controls[Basic.Controls.Count - 1];
+            basicTab.Controls.Add(newCheckBox("Enable backface culling", xOffset, yOffset, Globals.doBackfaceCulling));
+            enableBFculling = (CheckBox)basicTab.Controls[basicTab.Controls.Count - 1];
             yOffset += 25;
-            Basic.Controls.Add(newCheckBox("Draw Object Models", xOffset, yOffset, Globals.drawObjectModels));
-            drawObjMdls = (CheckBox)Basic.Controls[Basic.Controls.Count - 1];
+            basicTab.Controls.Add(newCheckBox("Draw Object Models", xOffset, yOffset, Globals.drawObjectModels));
+            drawObjMdls = (CheckBox)basicTab.Controls[basicTab.Controls.Count - 1];
             yOffset += 30;
-            AddComboBoxSetting(Basic, "Render Map: ", 
+            AddComboBoxSetting(tabs.Tabs[0], "Render Map: ", 
                 new string[] { "Visual Map", "Collision Map" }, 
                 xOffset, yOffset, (Globals.renderCollisionMap ? 1 : 0));
-            renderMap = (ComboBox)Basic.Controls[Basic.Controls.Count - 1];
+            renderMap = (ComboBox)basicTab.Controls[basicTab.Controls.Count - 1];
             yOffset += 35;
             
-            AddTrackBarSetting(Basic, "Field of view: ", ref fovBarDisplay, xOffset, yOffset, 10, 170, Globals.FOV);
-            fovBar = (TrackBar)Basic.Controls[Basic.Controls.Count - 1];
+            AddTrackBarSetting(tabs.Tabs[0], "Field of view: ", ref fovBarDisplay, xOffset, yOffset, 10, 170, Globals.FOV);
+            fovBar = (TrackBar)basicTab.Controls[basicTab.Controls.Count - 1];
             yOffset += 50;
 
-            Basic.Controls.Add(newLineSeparator(xOffset, yOffset, SeperatorWidth));
+            basicTab.Controls.Add(newLineSeparator(xOffset, yOffset, SeperatorWidth));
             yOffset += 10;
-            Basic.Controls.Add(newFancyLabel("Editor Settings", 0,
+            basicTab.Controls.Add(newFancyLabel("Editor Settings", 0,
                 yOffset, new Font("Arial", 10, FontStyle.Bold)));
             yOffset += 30;
-            Basic.Controls.Add(newCheckBox("Automatically load last ROM file", xOffset, yOffset, Globals.autoLoadROMOnStartup));
-            autoLoadROM = (CheckBox)Basic.Controls[Basic.Controls.Count - 1];
+            basicTab.Controls.Add(newCheckBox("Automatically load last ROM file", xOffset, yOffset, Globals.autoLoadROMOnStartup));
+            autoLoadROM = (CheckBox)basicTab.Controls[basicTab.Controls.Count - 1];
             yOffset += 30;
-            AddComboBoxSetting(Basic, "Use Hexadecimal? ", 
+            AddComboBoxSetting(tabs.Tabs[0], "Use Hexadecimal? ", 
                 new string[] { "No (Decimal Only)", "Yes (Signed Hex)", "Yes (Unsigned Hex)" }, 
                 xOffset, yOffset, (!Globals.useHexadecimal ? 0 : (Globals.useSignedHex ? 1 : 2)));
-            useHex = (ComboBox)Basic.Controls[Basic.Controls.Count - 1];
+            useHex = (ComboBox)basicTab.Controls[basicTab.Controls.Count - 1];
         }
 
         private void trackBar_updateLabelValue(object sender, EventArgs e)
@@ -113,18 +123,17 @@ namespace Quad64.src.Forms
             ((Label)(bar.Tag)).Text = bar.Value.ToString();
         }
 
-        private void AddTrackBarSetting(TabPage page, string label, ref Label updateDisplay, int x, int y, int min, int max, int currentValue)
+        private void AddTrackBarSetting(Page page, string label, ref Label updateDisplay, int x, int y, int min, int max, int currentValue)
         {
             Label tbl = newLabel(label, x, y + 3);
             tbl.Width = 70;
             updateDisplay.ForeColor = Theme.DEFAULT_TEXT;
-            updateDisplay.BackColor = Theme.DEFAULT_BACKGROUND;
+            updateDisplay.BackColor = Color.Transparent;
             updateDisplay.Location = new Point(x, y + 20);
             updateDisplay.TextAlign = ContentAlignment.MiddleCenter;
             updateDisplay.Text = currentValue.ToString();
             updateDisplay.Width = 74;
             TrackBar tb = newTrackBar(x + tbl.Width, y, min, max, currentValue);
-            tb.BackColor = Theme.DEFAULT_BACKGROUND;
             tb.Tag = updateDisplay;
             tb.ValueChanged += new EventHandler(trackBar_updateLabelValue);
             page.Controls.Add(tbl);
@@ -132,7 +141,7 @@ namespace Quad64.src.Forms
             page.Controls.Add(tb);
         }
 
-        private void AddComboBoxSetting(TabPage page, string label, string[] options, int x, int y, int selectedIndex)
+        private void AddComboBoxSetting(Page page, string label, string[] options, int x, int y, int selectedIndex)
         {
             Label cbl = newLabel(label, x, y+3);
             page.Controls.Add(cbl);
@@ -162,7 +171,7 @@ namespace Quad64.src.Forms
             label.Left = x;
             label.Top = y;
             label.ForeColor = Theme.DEFAULT_TEXT;
-            label.BackColor = Theme.DEFAULT_BACKGROUND;
+            label.BackColor = Color.Transparent;
             return label;
         }
 
@@ -176,7 +185,7 @@ namespace Quad64.src.Forms
             label.Top = y;
             label.Font = font;
             label.ForeColor = Theme.DEFAULT_TEXT;
-            label.BackColor = Theme.DEFAULT_BACKGROUND;
+            label.BackColor = Color.Transparent;
             return label;
         }
 
@@ -232,7 +241,7 @@ namespace Quad64.src.Forms
             box.TabStop = false;
             box.Checked = isChecked;
             box.ForeColor = Theme.DEFAULT_TEXT;
-            box.BackColor = Theme.DEFAULT_BACKGROUND;
+            box.BackColor = Color.Transparent;
             return box;
         }
 
@@ -245,7 +254,7 @@ namespace Quad64.src.Forms
             bar.TickFrequency = 10;
             bar.Left = x;
             bar.Top = y;
-            bar.BackColor = Theme.DEFAULT_BACKGROUND;
+            bar.BackColor = Theme.MAIN_MENUBAR_BACKGROUND;
             return bar;
         }
 
