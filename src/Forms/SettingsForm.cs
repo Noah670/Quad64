@@ -33,10 +33,6 @@ namespace Quad64.src.Forms
             AddBasicTabSettings();
             AddAdvancedTabSettings();
 
-            //var tabRenderer = new Manina.Windows.Forms.TabControl.TabControlRenderer(tabs);
-            //tabRenderer.
-            //tabs.Renderer = tabRenderer;
-
             basicTab.ForeColor = Theme.DEFAULT_TEXT;
             basicTab.BackColor = Theme.MAIN_MENUBAR_BACKGROUND;
             advancedTab.BackColor = Theme.MAIN_MENUBAR_BACKGROUND;
@@ -59,16 +55,18 @@ namespace Quad64.src.Forms
             AddButtonWithTextBox(tabs.Tabs[1], "Browse", Globals.pathToEmulator, true, xOffset, yOffset, advancedTab.Width, 
                 ref emuPathTextBox, ref setEmuPathButton, OpenEmulatorPath_Click);
             yOffset += 30;
+            xOffset = 3;
             advancedTab.Controls.Add(newCheckBox("Automatically save ROM when launching emulator", xOffset, yOffset, Globals.autoSaveWhenClickEmulator));
             autoSaveWithEmulatorBox = (CheckBox)advancedTab.Controls[advancedTab.Controls.Count - 1];
         }
 
         private void AddButtonWithTextBox(Page page, string buttonText, string textBoxText, bool isTextBoxReadOnly, int x, int y, int screenWidth, ref TextBox box, ref Button button, EventHandler buttonClickEvent)
-        {
-            button = newButton(buttonText, x, y, buttonClickEvent);
-            box = newTextBox(textBoxText, isTextBoxReadOnly, x + button.Width, y+1, screenWidth-button.Width-3);
-            page.Controls.Add(button);
+        {         
+            box = newTextBox(textBoxText, isTextBoxReadOnly, x+3, y+1, 375);
+            button = newButton(buttonText, x + box.Width + 10, y, buttonClickEvent);
+
             page.Controls.Add(box);
+            page.Controls.Add(button);
         }
 
         private void OpenEmulatorPath_Click(object sender, EventArgs e)
@@ -197,6 +195,7 @@ namespace Quad64.src.Forms
             button.Left = x;
             button.Top = y;
             button.Click += clickEvent;
+            button.FlatStyle = FlatStyle.Flat;
             button.ForeColor = Theme.DEFAULT_BUTTON_TEXT;
             button.BackColor = Theme.DEFAULT_BUTTON_BACKGROUND;
             return button;
