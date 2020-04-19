@@ -77,9 +77,9 @@
             // 
             // basicTab
             // 
-            this.basicTab.Location = new System.Drawing.Point(1, 21);
+            this.basicTab.Location = new System.Drawing.Point(0, 0);
             this.basicTab.Name = "basicTab";
-            this.basicTab.Size = new System.Drawing.Size(470, 261);
+            this.basicTab.Size = new System.Drawing.Size(0, 0);
             this.basicTab.Text = "Basic";
             // 
             // advancedTab

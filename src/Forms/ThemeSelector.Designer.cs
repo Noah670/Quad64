@@ -44,6 +44,7 @@
             this.author});
             this.themes.FullRowSelect = true;
             this.themes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.themes.HideSelection = false;
             this.themes.Location = new System.Drawing.Point(12, 12);
             this.themes.Name = "themes";
             this.themes.ShowGroups = false;
